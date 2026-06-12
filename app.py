@@ -346,6 +346,64 @@ hr {
     background: linear-gradient(135deg, rgba(232,93,12,0.25) 0%, rgba(232,93,12,0.12) 100%) !important;
     transform: translateX(3px) !important;
     box-shadow: none !important;
+
+/* ── Botões Customizados (Add, Confirm, Cancel) Globais ── */
+div.element-container:has(.btn-add) + div.element-container button,
+.btn-add button,
+.btn-add > div > button {
+    background: rgba(43,76,140,0.15) !important;
+    color: #7BA1F2 !important;
+    border: 1px solid rgba(43,76,140,0.4) !important;
+    border-radius: 8px !important;
+    font-size: 13.5px !important;
+    font-weight: 600 !important;
+    height: 44px !important;
+    transition: all 0.2s !important;
+}
+div.element-container:has(.btn-add) + div.element-container button:hover,
+.btn-add button:hover,
+.btn-add > div > button:hover {
+    background: rgba(43,76,140,0.25) !important;
+    border-color: rgba(43,76,140,0.6) !important;
+    color: #93B2F4 !important;
+}
+
+div.element-container:has(.btn-confirm) + div.element-container button,
+.btn-confirm button,
+.btn-confirm > div > button {
+    background: #E85D04 !important;
+    color: #ffffff !important;
+    border: none !important;
+    border-radius: 8px !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    height: 44px !important;
+    transition: all 0.2s !important;
+}
+div.element-container:has(.btn-confirm) + div.element-container button:hover,
+.btn-confirm button:hover,
+.btn-confirm > div > button:hover {
+    background: #FF6B1A !important;
+}
+
+div.element-container:has(.btn-cancel) + div.element-container button,
+.btn-cancel button,
+.btn-cancel > div > button {
+    background: transparent !important;
+    color: #8A7B72 !important;
+    border: 1px solid #332B25 !important;
+    border-radius: 8px !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    height: 44px !important;
+    transition: all 0.2s !important;
+}
+div.element-container:has(.btn-cancel) + div.element-container button:hover,
+.btn-cancel button:hover,
+.btn-cancel > div > button:hover {
+    background: #1A1715 !important;
+    color: #FFF8F0 !important;
+    border-color: #554A40 !important;
 }
 
 </style>
