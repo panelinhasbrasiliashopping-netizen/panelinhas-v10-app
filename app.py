@@ -2556,6 +2556,9 @@ with col_conteudo:
             border-color: #E85D04 !important;
             color: #fff !important;
         }
+        div.element-container:has(.btn-periodo) + div.element-container button,
+        div.element-container:has(.btn-periodo) button,
+        .btn-periodo button,
         .btn-periodo > div > button {
             background: #1A1715 !important;
             color: #8A7B72 !important;
@@ -2567,11 +2570,17 @@ with col_conteudo:
             padding: 0 14px !important;
             transition: all 0.15s !important;
         }
+        div.element-container:has(.btn-periodo) + div.element-container button:hover,
+        div.element-container:has(.btn-periodo) button:hover,
+        .btn-periodo button:hover,
         .btn-periodo > div > button:hover {
             background: #2A2420 !important;
             color: #FFF8F0 !important;
             border-color: #554A40 !important;
         }
+        div.element-container:has(.btn-periodo-ativo) + div.element-container button,
+        div.element-container:has(.btn-periodo-ativo) button,
+        .btn-periodo-ativo button,
         .btn-periodo-ativo > div > button {
             background: rgba(232,93,4,0.15) !important;
             color: #E85D04 !important;
@@ -2582,6 +2591,9 @@ with col_conteudo:
             height: 34px !important;
             padding: 0 14px !important;
         }
+        div.element-container:has(.btn-export) + div.element-container button,
+        div.element-container:has(.btn-export) button,
+        .btn-export button,
         .btn-export > div > button {
             background: #1A1715 !important;
             color: #FFF8F0 !important;
