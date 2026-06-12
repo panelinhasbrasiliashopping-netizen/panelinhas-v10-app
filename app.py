@@ -349,6 +349,8 @@ hr {
 
 
 /* ── Botões Customizados (Add, Confirm, Cancel) Globais ── */
+[data-testid="stElementContainer"]:has(.btn-add) ~ [data-testid="stElementContainer"] button,
+[data-testid="stElementContainer"]:has(.btn-add) button,
 div.element-container:has(.btn-add) ~ div button,
 div.element-container:has(.btn-add) button,
 .btn-add button,
@@ -362,6 +364,8 @@ div.element-container:has(.btn-add) button,
     height: 44px !important;
     transition: all 0.2s !important;
 }
+[data-testid="stElementContainer"]:has(.btn-add) ~ [data-testid="stElementContainer"] button:hover,
+[data-testid="stElementContainer"]:has(.btn-add) button:hover,
 div.element-container:has(.btn-add) ~ div button:hover,
 div.element-container:has(.btn-add) button:hover,
 .btn-add button:hover,
@@ -371,6 +375,8 @@ div.element-container:has(.btn-add) button:hover,
     color: #93B2F4 !important;
 }
 
+[data-testid="stElementContainer"]:has(.btn-confirm) ~ [data-testid="stElementContainer"] button,
+[data-testid="stElementContainer"]:has(.btn-confirm) button,
 div.element-container:has(.btn-confirm) ~ div button,
 div.element-container:has(.btn-confirm) button,
 .btn-confirm button,
@@ -384,6 +390,8 @@ div.element-container:has(.btn-confirm) button,
     height: 44px !important;
     transition: all 0.2s !important;
 }
+[data-testid="stElementContainer"]:has(.btn-confirm) ~ [data-testid="stElementContainer"] button:hover,
+[data-testid="stElementContainer"]:has(.btn-confirm) button:hover,
 div.element-container:has(.btn-confirm) ~ div button:hover,
 div.element-container:has(.btn-confirm) button:hover,
 .btn-confirm button:hover,
@@ -391,6 +399,8 @@ div.element-container:has(.btn-confirm) button:hover,
     background: #FF6B1A !important;
 }
 
+[data-testid="stElementContainer"]:has(.btn-cancel) ~ [data-testid="stElementContainer"] button,
+[data-testid="stElementContainer"]:has(.btn-cancel) button,
 div.element-container:has(.btn-cancel) ~ div button,
 div.element-container:has(.btn-cancel) button,
 .btn-cancel button,
@@ -404,6 +414,8 @@ div.element-container:has(.btn-cancel) button,
     height: 44px !important;
     transition: all 0.2s !important;
 }
+[data-testid="stElementContainer"]:has(.btn-cancel) ~ [data-testid="stElementContainer"] button:hover,
+[data-testid="stElementContainer"]:has(.btn-cancel) button:hover,
 div.element-container:has(.btn-cancel) ~ div button:hover,
 div.element-container:has(.btn-cancel) button:hover,
 .btn-cancel button:hover,
@@ -414,8 +426,10 @@ div.element-container:has(.btn-cancel) button:hover,
 }
 
 /* ── Estilização de Inputs (Dropdowns, Text, Number Inputs) Globais ── */
-input[type="text"], input[type="number"],
-.stTextInput > div > div > input, .stNumberInput > div > div > input {
+[data-testid="stTextInput"] input,
+[data-testid="stNumberInput"] input,
+input[type="text"],
+input[type="number"] {
     background: #141210 !important;
     border: 1px solid #332B25 !important;
     border-radius: 8px !important;
@@ -425,23 +439,25 @@ input[type="text"], input[type="number"],
     height: 48px !important;
     transition: all 0.2s ease !important;
 }
-input[type="text"]:focus, input[type="number"]:focus,
-.stTextInput > div > div > input:focus, .stNumberInput > div > div > input:focus {
+[data-testid="stTextInput"] input:focus,
+[data-testid="stNumberInput"] input:focus {
     border-color: #E85D04 !important;
     box-shadow: 0 0 0 3px rgba(232,93,4,0.15) !important;
 }
-.stSelectbox > div > div {
+[data-testid="stSelectbox"] > div > div {
     background: #141210 !important;
     border: 1px solid #332B25 !important;
     border-radius: 8px !important;
     color: #FFF8F0 !important;
     min-height: 48px !important;
 }
-.stSelectbox > div > div:focus-within {
+[data-testid="stSelectbox"] > div > div:focus-within {
     border-color: #E85D04 !important;
     box-shadow: 0 0 0 3px rgba(232,93,4,0.15) !important;
 }
-.stTextInput label, .stNumberInput label, .stSelectbox label {
+[data-testid="stTextInput"] label,
+[data-testid="stNumberInput"] label,
+[data-testid="stSelectbox"] label {
     display: none !important; /* Esconde nativas */
 }
 
@@ -1316,6 +1332,67 @@ with col_conteudo:
             color: #D99F2A;
             flex-shrink: 0;
             font-weight: bold;
+        }
+        
+        /* Botões Customizados */
+        div.element-container:has(.btn-add) + div.element-container button,
+        .btn-add button,
+        .btn-add > div > button {
+            background: rgba(43,76,140,0.15) !important;
+            color: #7BA1F2 !important;
+            border: 1px solid rgba(43,76,140,0.4) !important;
+            border-radius: 8px !important;
+            font-size: 13.5px !important;
+            font-weight: 600 !important;
+            height: 44px !important;
+            transition: all 0.2s !important;
+        }
+        div.element-container:has(.btn-add) + div.element-container button:hover,
+        .btn-add button:hover,
+        .btn-add > div > button:hover {
+            background: rgba(43,76,140,0.25) !important;
+            border-color: rgba(43,76,140,0.6) !important;
+            color: #93B2F4 !important;
+        }
+        
+        /* Botão Confirmar (Laranja) */
+        div.element-container:has(.btn-confirm) + div.element-container button,
+        .btn-confirm button,
+        .btn-confirm > div > button {
+            background: #E85D04 !important;
+            color: #ffffff !important;
+            border: none !important;
+            border-radius: 8px !important;
+            font-size: 14px !important;
+            font-weight: 600 !important;
+            height: 44px !important;
+            transition: all 0.2s !important;
+        }
+        div.element-container:has(.btn-confirm) + div.element-container button:hover,
+        .btn-confirm button:hover,
+        .btn-confirm > div > button:hover {
+            background: #FF6B1A !important;
+        }
+        
+        /* Botão Cancelar (Cinza) */
+        div.element-container:has(.btn-cancel) + div.element-container button,
+        .btn-cancel button,
+        .btn-cancel > div > button {
+            background: transparent !important;
+            color: #8A7B72 !important;
+            border: 1px solid #332B25 !important;
+            border-radius: 8px !important;
+            font-size: 14px !important;
+            font-weight: 500 !important;
+            height: 44px !important;
+            transition: all 0.2s !important;
+        }
+        div.element-container:has(.btn-cancel) + div.element-container button:hover,
+        .btn-cancel button:hover,
+        .btn-cancel > div > button:hover {
+            background: #1A1715 !important;
+            color: #FFF8F0 !important;
+            border-color: #554A40 !important;
         }
         </style>
         """, unsafe_allow_html=True)
