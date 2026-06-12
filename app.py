@@ -3356,6 +3356,10 @@ with col_conteudo:
         }
         .stTextInput label { display:none !important; }
 
+        /* Botão Atualizar (Verde Plan) */
+        div.element-container:has(.btn-plan) + div.element-container button,
+        div.element-container:has(.btn-plan) button,
+        .btn-plan button,
         .btn-plan > div > button {
             background: #0F4A3A !important;
             color: #2ED297 !important;
@@ -3364,10 +3368,20 @@ with col_conteudo:
             font-size: 13px !important;
             font-weight: 700 !important;
             height: 40px !important;
+            transition: all 0.2s ease !important;
         }
+        div.element-container:has(.btn-plan) + div.element-container button:hover,
+        div.element-container:has(.btn-plan) button:hover,
+        .btn-plan button:hover,
         .btn-plan > div > button:hover {
             background: #144A2A !important;
+            color: #fff !important;
         }
+
+        /* Botão Plan Outline (Excel / Imprimir) */
+        div.element-container:has(.btn-plan-outline) + div.element-container button,
+        div.element-container:has(.btn-plan-outline) button,
+        .btn-plan-outline button,
         .btn-plan-outline > div > button {
             background: #1A1715 !important;
             color: #FFF8F0 !important;
@@ -3376,7 +3390,21 @@ with col_conteudo:
             font-size: 13px !important;
             font-weight: 600 !important;
             height: 40px !important;
+            transition: all 0.2s ease !important;
         }
+        div.element-container:has(.btn-plan-outline) + div.element-container button:hover,
+        div.element-container:has(.btn-plan-outline) button:hover,
+        .btn-plan-outline button:hover,
+        .btn-plan-outline > div > button:hover {
+            background: #332B25 !important;
+            border-color: #554A40 !important;
+            color: #fff !important;
+        }
+
+        /* Botão Pedido */
+        div.element-container:has(.btn-pedido) + div.element-container button,
+        div.element-container:has(.btn-pedido) button,
+        .btn-pedido button,
         .btn-pedido > div > button {
             background: rgba(232,93,4,0.12) !important;
             color: #E85D04 !important;
@@ -3386,9 +3414,66 @@ with col_conteudo:
             font-weight: 700 !important;
             height: 34px !important;
             padding: 0 12px !important;
+            transition: all 0.2s ease !important;
         }
+        div.element-container:has(.btn-pedido) + div.element-container button:hover,
+        div.element-container:has(.btn-pedido) button:hover,
+        .btn-pedido button:hover,
         .btn-pedido > div > button:hover {
             background: rgba(232,93,4,0.25) !important;
+            color: #ff8a3d !important;
+        }
+
+        /* ── Filtros Rápidos (Todos, Urgente, Em breve, Estável) ── */
+        /* Inativos */
+        div.element-container:has(.btn-filter-todos) + div.element-container button {
+            background: #1A1715 !important; color: #8A7B72 !important; border: 1px solid #332B25 !important;
+            border-radius: 8px !important; font-size: 13px !important; height: 38px !important; transition: all 0.2s ease !important;
+        }
+        div.element-container:has(.btn-filter-todos) + div.element-container button:hover {
+            background: #2A2420 !important; color: #FFF8F0 !important;
+        }
+        div.element-container:has(.btn-filter-urgente) + div.element-container button {
+            background: rgba(239, 68, 68, 0.05) !important; color: #FCA5A5 !important; border: 1px solid rgba(239, 68, 68, 0.2) !important;
+            border-radius: 8px !important; font-size: 13px !important; height: 38px !important; transition: all 0.2s ease !important;
+        }
+        div.element-container:has(.btn-filter-urgente) + div.element-container button:hover {
+            background: rgba(239, 68, 68, 0.15) !important; color: #FFF8F0 !important;
+        }
+        div.element-container:has(.btn-filter-breve) + div.element-container button {
+            background: rgba(245, 158, 11, 0.05) !important; color: #FDE047 !important; border: 1px solid rgba(245, 158, 11, 0.2) !important;
+            border-radius: 8px !important; font-size: 13px !important; height: 38px !important; transition: all 0.2s ease !important;
+        }
+        div.element-container:has(.btn-filter-breve) + div.element-container button:hover {
+            background: rgba(245, 158, 11, 0.15) !important; color: #FFF8F0 !important;
+        }
+        div.element-container:has(.btn-filter-estavel) + div.element-container button {
+            background: rgba(34, 197, 94, 0.05) !important; color: #86EFAC !important; border: 1px solid rgba(34, 197, 94, 0.2) !important;
+            border-radius: 8px !important; font-size: 13px !important; height: 38px !important; transition: all 0.2s ease !important;
+        }
+        div.element-container:has(.btn-filter-estavel) + div.element-container button:hover {
+            background: rgba(34, 197, 94, 0.15) !important; color: #FFF8F0 !important;
+        }
+
+        /* Ativos */
+        div.element-container:has(.btn-filter-active-todos) + div.element-container button {
+            background: #332B25 !important; color: #FFF8F0 !important; border: 1px solid #E85D04 !important; font-weight: 700 !important;
+            border-radius: 8px !important; font-size: 13px !important; height: 38px !important; transition: all 0.2s ease !important;
+        }
+        div.element-container:has(.btn-filter-active-urgente) + div.element-container button {
+            background: #EF4444 !important; color: #ffffff !important; border: none !important; font-weight: 700 !important;
+            border-radius: 8px !important; font-size: 13px !important; height: 38px !important; transition: all 0.2s ease !important;
+            box-shadow: 0 4px 12px rgba(239, 68, 68, 0.25) !important;
+        }
+        div.element-container:has(.btn-filter-active-breve) + div.element-container button {
+            background: #F59E0B !important; color: #1A1208 !important; border: none !important; font-weight: 700 !important;
+            border-radius: 8px !important; font-size: 13px !important; height: 38px !important; transition: all 0.2s ease !important;
+            box-shadow: 0 4px 12px rgba(245, 158, 11, 0.25) !important;
+        }
+        div.element-container:has(.btn-filter-active-estavel) + div.element-container button {
+            background: #22C55E !important; color: #ffffff !important; border: none !important; font-weight: 700 !important;
+            border-radius: 8px !important; font-size: 13px !important; height: 38px !important; transition: all 0.2s ease !important;
+            box-shadow: 0 4px 12px rgba(34, 197, 94, 0.25) !important;
         }
         .stDataFrame { border-radius: 12px !important; border: 1px solid #2A2624 !important; }
         </style>
@@ -3623,11 +3708,35 @@ with col_conteudo:
             busca_plan = st.text_input("Buscar produto", placeholder="🔍 Buscar produto...", key="bp1", label_visibility="collapsed")
         with f2:
             filtro_cols = st.columns(4)
-            filtros_opts = ["Todos", "🔴 Urgente", "🟡 Em breve", "🟢 Estável"]
-            filtro_sel = filtro_cols[0].button(f"Todos  {total}", key="ft_all",  use_container_width=True)
-            filtro_urg = filtro_cols[1].button(f"🚨 Urgente  {urgentes}", key="ft_urg", use_container_width=True)
-            filtro_brv = filtro_cols[2].button(f"⏳ Em breve  {breve}", key="ft_brv", use_container_width=True)
-            filtro_est = filtro_cols[3].button(f"✅ Estável  {estaveis}", key="ft_est", use_container_width=True)
+            filtro_ativo = st.session_state.get("plan_filter", "todos")
+            
+            # Todos
+            is_all_active = (filtro_ativo == "todos")
+            with filtro_cols[0]:
+                st.markdown(f'<div class="{"btn-filter-active-todos" if is_all_active else "btn-filter-todos"}">', unsafe_allow_html=True)
+                filtro_sel = st.button(f"Todos  {total}", key="ft_all", use_container_width=True)
+                st.markdown('</div>', unsafe_allow_html=True)
+                
+            # Urgente
+            is_urg_active = (filtro_ativo == "urgente")
+            with filtro_cols[1]:
+                st.markdown(f'<div class="{"btn-filter-active-urgente" if is_urg_active else "btn-filter-urgente"}">', unsafe_allow_html=True)
+                filtro_urg = st.button(f"🚨 Urgente  {urgentes}", key="ft_urg", use_container_width=True)
+                st.markdown('</div>', unsafe_allow_html=True)
+                
+            # Em breve
+            is_brv_active = (filtro_ativo == "breve")
+            with filtro_cols[2]:
+                st.markdown(f'<div class="{"btn-filter-active-breve" if is_brv_active else "btn-filter-breve"}">', unsafe_allow_html=True)
+                filtro_brv = st.button(f"⏳ Em breve  {breve}", key="ft_brv", use_container_width=True)
+                st.markdown('</div>', unsafe_allow_html=True)
+                
+            # Estável
+            is_est_active = (filtro_ativo == "estavel")
+            with filtro_cols[3]:
+                st.markdown(f'<div class="{"btn-filter-active-estavel" if is_est_active else "btn-filter-estavel"}">', unsafe_allow_html=True)
+                filtro_est = st.button(f"✅ Estável  {estaveis}", key="ft_est", use_container_width=True)
+                st.markdown('</div>', unsafe_allow_html=True)
 
         # Filtro de estado (session_state)
         if filtro_urg: st.session_state["plan_filter"] = "urgente"
