@@ -99,6 +99,22 @@ select, input, textarea, button, label, p, span, div, h1, h2, h3, h4, h5, h6,
     box-shadow: 0 2px 8px rgba(232, 93, 12, 0.2) !important;
 }
 
+/* ── Botões Secundários da Tela Principal ────────────────── */
+.main .stButton > button[kind="secondary"] {
+    background: #1E1A17 !important;
+    border: 1px solid #332B25 !important;
+    color: #FFF8F0 !important;
+    border-radius: 10px !important;
+    font-family: 'Outfit', sans-serif !important;
+    font-size: 14px !important;
+    transition: all 0.2s ease !important;
+}
+.main .stButton > button[kind="secondary"]:hover {
+    border-color: #E85D0C !important;
+    background: #2A2420 !important;
+    color: #fff !important;
+}
+
 /* ── Cards de Métricas ─────────────────────────────────── */
 [data-testid="metric-container"] {
     background: linear-gradient(145deg, #FFFCFA 0%, #FFF6F0 100%);
