@@ -2030,6 +2030,8 @@ with col_conteudo:
         }
 
         /* Botões */
+        div.element-container:has(.btn-confirm-ajuste) + div.element-container button,
+        .btn-confirm-ajuste button,
         .btn-confirm-ajuste > div > button {
             background: #D99F2A !important;
             color: #1A1208 !important;
@@ -2040,9 +2042,13 @@ with col_conteudo:
             height: 44px !important;
             transition: all 0.2s !important;
         }
+        div.element-container:has(.btn-confirm-ajuste) + div.element-container button:hover,
+        .btn-confirm-ajuste button:hover,
         .btn-confirm-ajuste > div > button:hover {
             background: #F0B830 !important;
         }
+        div.element-container:has(.btn-cancel) + div.element-container button,
+        .btn-cancel button,
         .btn-cancel > div > button {
             background: transparent !important;
             color: #8A7B72 !important;
@@ -2053,6 +2059,8 @@ with col_conteudo:
             height: 44px !important;
             transition: all 0.2s !important;
         }
+        div.element-container:has(.btn-cancel) + div.element-container button:hover,
+        .btn-cancel button:hover,
         .btn-cancel > div > button:hover {
             background: #1A1715 !important;
             color: #FFF8F0 !important;
