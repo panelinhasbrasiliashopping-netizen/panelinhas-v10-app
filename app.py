@@ -39,6 +39,19 @@ select, input, textarea, button, label, p, span, div, h1, h2, h3, h4, h5, h6,
 [data-testid="stMarkdownContainer"] {
     font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif !important;
 }
+[data-testid="stMarkdownContainer"], 
+[data-testid="stMarkdownContainer"] p, 
+[data-testid="stMarkdownContainer"] span, 
+[data-testid="stMarkdownContainer"] li, 
+[data-testid="stMarkdownContainer"] strong,
+[data-testid="stMarkdownContainer"] h1,
+[data-testid="stMarkdownContainer"] h2,
+[data-testid="stMarkdownContainer"] h3,
+[data-testid="stMarkdownContainer"] h4,
+[data-testid="stMarkdownContainer"] h5,
+[data-testid="stMarkdownContainer"] h6 {
+    color: #FFF8F0 !important;
+}
 .block-container {
     padding-top: 1rem !important;
     padding-bottom: 1rem !important;
@@ -222,14 +235,14 @@ select, input, textarea, button, label, p, span, div, h1, h2, h3, h4, h5, h6,
     font-family: 'Outfit', sans-serif;
     font-size: 24px;
     font-weight: 800;
-    color: #1a1a1a;
+    color: #FFF8F0 !important;
     letter-spacing: -0.3px;
 }
 .ph p {
     margin: 0;
     font-family: 'Outfit', sans-serif;
     font-size: 13px;
-    color: #888;
+    color: #A99A90 !important;
     font-weight: 400;
 }
 
