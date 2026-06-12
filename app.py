@@ -100,7 +100,9 @@ select, input, textarea, button, label, p, span, div, h1, h2, h3, h4, h5, h6,
 }
 
 /* ── Botões Secundários da Tela Principal ────────────────── */
-.main .stButton > button[kind="secondary"] {
+.main .stButton > button[kind="secondary"],
+.main [data-testid="stDownloadButton"] > button,
+.main [data-testid="stFormSubmitButton"] > button[kind="secondary"] {
     background: #1E1A17 !important;
     border: 1px solid #332B25 !important;
     color: #FFF8F0 !important;
@@ -109,7 +111,9 @@ select, input, textarea, button, label, p, span, div, h1, h2, h3, h4, h5, h6,
     font-size: 14px !important;
     transition: all 0.2s ease !important;
 }
-.main .stButton > button[kind="secondary"]:hover {
+.main .stButton > button[kind="secondary"]:hover,
+.main [data-testid="stDownloadButton"] > button:hover,
+.main [data-testid="stFormSubmitButton"] > button[kind="secondary"]:hover {
     border-color: #E85D0C !important;
     background: #2A2420 !important;
     color: #fff !important;
