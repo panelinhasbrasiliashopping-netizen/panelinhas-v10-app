@@ -815,7 +815,9 @@ with col_conteudo:
         
 
                 /* Botão Adicionar ao lançamento (Outline/Azulado) */
-        .btn-add button {
+        div.element-container:has(.btn-add) + div.element-container button,
+        .btn-add button,
+        .btn-add > div > button {
             background: rgba(43,76,140,0.15) !important;
             color: #7BA1F2 !important;
             border: 1px solid rgba(43,76,140,0.4) !important;
@@ -825,14 +827,18 @@ with col_conteudo:
             height: 44px !important;
             transition: all 0.2s !important;
         }
-        .btn-add button:hover {
+        div.element-container:has(.btn-add) + div.element-container button:hover,
+        .btn-add button:hover,
+        .btn-add > div > button:hover {
             background: rgba(43,76,140,0.25) !important;
             border-color: rgba(43,76,140,0.6) !important;
             color: #93B2F4 !important;
         }
         
         /* Botão Confirmar (Laranja) */
-        .btn-confirm button {
+        div.element-container:has(.btn-confirm) + div.element-container button,
+        .btn-confirm button,
+        .btn-confirm > div > button {
             background: #E85D04 !important;
             color: #ffffff !important;
             border: none !important;
@@ -842,12 +848,16 @@ with col_conteudo:
             height: 44px !important;
             transition: all 0.2s !important;
         }
-        .btn-confirm button:hover {
+        div.element-container:has(.btn-confirm) + div.element-container button:hover,
+        .btn-confirm button:hover,
+        .btn-confirm > div > button:hover {
             background: #FF6B1A !important;
         }
         
         /* Botão Cancelar (Cinza) */
-        .btn-cancel button {
+        div.element-container:has(.btn-cancel) + div.element-container button,
+        .btn-cancel button,
+        .btn-cancel > div > button {
             background: transparent !important;
             color: #8A7B72 !important;
             border: 1px solid #332B25 !important;
@@ -857,7 +867,9 @@ with col_conteudo:
             height: 44px !important;
             transition: all 0.2s !important;
         }
-        .btn-cancel button:hover {
+        div.element-container:has(.btn-cancel) + div.element-container button:hover,
+        .btn-cancel button:hover,
+        .btn-cancel > div > button:hover {
             background: #1A1715 !important;
             color: #FFF8F0 !important;
             border-color: #554A40 !important;
