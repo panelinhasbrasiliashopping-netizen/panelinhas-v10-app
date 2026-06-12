@@ -31,6 +31,9 @@ st.markdown("""
 [data-testid="stSidebarCollapseButton"],
 [data-testid="stToolbar"] { display:none !important; }
 
+[data-testid="stApp"],
+[data-testid="stAppViewContainer"] { background: #141210 !important; }
+
 html, body, [class*="css"], .stMarkdown, .stText,
 select, input, textarea, button, label, p, span, div, h1, h2, h3, h4, h5, h6,
 [data-testid="stMarkdownContainer"] {
