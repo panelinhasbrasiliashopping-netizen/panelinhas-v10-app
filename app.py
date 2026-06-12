@@ -1088,64 +1088,91 @@ with col_conteudo:
     ICONES_SAIDA = ["📦", "🗑️", "↩️", "🔄", "📉", "💼"]
     
     def tela_saida():
+        # CSS Customizado Adicional para as Abas e Uploader
         st.markdown("""
         <style>
-        /* ── CSS Saída Dark Theme ── */
-        .block-container { padding-top: 1.5rem !important; }
-        input[type="text"], input[type="number"],
-        .stTextInput > div > div > input, .stNumberInput > div > div > input {
-            background: #141210 !important; border: 1px solid #332B25 !important;
-            border-radius: 8px !important; color: #FFF8F0 !important;
+        /* ── Estilização Premium do File Uploader ── */
+        [data-testid="stFileUploader"] {
+            background-color: #141210 !important;
+            border: 2px dashed #332B25 !important;
+            border-radius: 12px !important;
+            padding: 24px !important;
+            text-align: center !important;
+            transition: all 0.25s ease-in-out !important;
+        }
+        [data-testid="stFileUploader"]:hover {
+            border-color: #EF4444 !important;
+            background-color: #1C1917 !important;
+            box-shadow: 0 4px 20px rgba(239, 68, 68, 0.05) !important;
+        }
+        [data-testid="stFileUploader"] label {
+            display: none !important;
+        }
+        /* Botão interno do Uploader */
+        [data-testid="stFileUploader"] button {
+            background-color: #332B25 !important;
+            color: #FFF8F0 !important;
+            border: 1px solid #4A3E35 !important;
+            border-radius: 8px !important;
+            padding: 8px 16px !important;
+            font-size: 13.5px !important;
+            font-weight: 600 !important;
+            transition: all 0.2s !important;
+            margin-top: 10px !important;
+        }
+        [data-testid="stFileUploader"] button:hover {
+            background-color: #EF4444 !important;
+            border-color: #EF4444 !important;
+            color: #ffffff !important;
+            box-shadow: 0 4px 12px rgba(239, 68, 68, 0.25) !important;
+        }
+        
+        /* Ajuste fino nas abas Streamlit */
+        .stTabs [data-baseweb="tab-list"] {
+            gap: 16px !important;
+            border-bottom: 1px solid #2A2624 !important;
+            padding-bottom: 8px !important;
+        }
+        .stTabs [data-baseweb="tab"] {
             font-family: 'Plus Jakarta Sans', sans-serif !important;
-            font-size: 14px !important; height: 48px !important; transition: all 0.2s ease !important;
+            font-size: 14px !important;
+            font-weight: 600 !important;
+            color: #8A7B72 !important;
+            padding: 10px 16px !important;
+            border-radius: 8px 8px 0 0 !important;
+            transition: all 0.2s !important;
         }
-        input[type="text"]:focus, input[type="number"]:focus,
-        .stTextInput > div > div > input:focus, .stNumberInput > div > div > input:focus {
-            border-color: #EF4444 !important; box-shadow: 0 0 0 3px rgba(239,68,68,0.15) !important;
+        .stTabs [aria-selected="true"] {
+            color: #FFF8F0 !important;
+            background: #2A2220 !important;
+            border-bottom: 2px solid #EF4444 !important;
         }
-        .stSelectbox > div > div {
-            background: #141210 !important; border: 1px solid #332B25 !important;
-            border-radius: 8px !important; color: #FFF8F0 !important; min-height: 48px !important;
+        
+        /* Cards Informativos do SWFast */
+        .flow-step-card {
+            background: #1A1715;
+            border: 1px solid #2A2624;
+            border-radius: 10px;
+            padding: 16px;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            font-family: 'Plus Jakarta Sans', sans-serif;
         }
-        .stSelectbox > div > div:focus-within {
-            border-color: #EF4444 !important; box-shadow: 0 0 0 3px rgba(239,68,68,0.15) !important;
+        .flow-step-icon {
+            width: 28px;
+            height: 28px;
+            background: #2A1F08;
+            border: 1px solid #4A3510;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            color: #D99F2A;
+            flex-shrink: 0;
+            font-weight: bold;
         }
-        .stTextInput label, .stNumberInput label, .stSelectbox label { display: none !important; }
-        .stRadio > div[role="radiogroup"] {
-            display: grid !important; grid-template-columns: 1fr 1fr 1fr !important; gap: 12px !important;
-        }
-        .stRadio > div[role="radiogroup"] > label {
-            background: #141210 !important; border: 1px solid #2A2624 !important;
-            border-radius: 12px !important; padding: 24px 16px !important; cursor: pointer !important;
-            transition: all 0.2s !important; color: #FFF8F0 !important; text-align: center !important;
-            display: flex !important; flex-direction: column !important;
-            align-items: center !important; justify-content: center !important;
-        }
-        .stRadio > div[role="radiogroup"] > label:hover { border-color: #554A40 !important; background: #1C1917 !important; }
-        .stRadio > div[role="radiogroup"] > label:has(input:checked) {
-            border-color: #EF4444 !important; background: rgba(239,68,68,0.05) !important;
-            box-shadow: 0 0 0 1px #EF4444 !important;
-        }
-        .stRadio > div[role="radiogroup"] > label > div:first-child { display: none !important; }
-        .stRadio div[data-testid="stMarkdownContainer"] > p { font-size: 15px !important; font-weight: 600 !important; margin: 0 !important; }
-        .btn-confirm > div > button {
-            background: #EF4444 !important; color: #ffffff !important; border: none !important;
-            border-radius: 8px !important; font-size: 14px !important; font-weight: 600 !important;
-            height: 44px !important; transition: all 0.2s !important;
-        }
-        .btn-confirm > div > button:hover { background: #DC2626 !important; }
-        .btn-add > div > button {
-            background: #1C3020 !important; color: #2ED297 !important; border: 1px solid #2A4A35 !important;
-            border-radius: 8px !important; font-size: 14px !important; font-weight: 600 !important;
-            height: 44px !important; transition: all 0.2s !important;
-        }
-        .btn-add > div > button:hover { background: #243D2A !important; border-color: #2ED297 !important; }
-        .btn-cancel > div > button {
-            background: transparent !important; color: #8A7B72 !important; border: 1px solid #332B25 !important;
-            border-radius: 8px !important; font-size: 14px !important; font-weight: 500 !important;
-            height: 44px !important; transition: all 0.2s !important;
-        }
-        .btn-cancel > div > button:hover { background: #1A1715 !important; color: #FFF8F0 !important; border-color: #554A40 !important; }
         </style>
         """, unsafe_allow_html=True)
 
@@ -1210,225 +1237,496 @@ with col_conteudo:
         </div>
         """, unsafe_allow_html=True)
 
-        # ── CARD 1: TIPO DE SAÍDA DO LOTE ───────────────────────────────────
-        st.markdown("""
-        <div style="background:#1A1715;border-radius:12px 12px 0 0;border:1px solid #2A2624;border-bottom:none;">
-            <div style="padding:18px 24px;display:flex;align-items:center;gap:14px;border-bottom:1px solid #2A2624;">
-                <div style="width:36px;height:36px;background:#2A200B;border:1px solid #4A3510;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px;color:#D99F2A;">🏷️</div>
-                <div>
-                    <div style="font-family:'Plus Jakarta Sans',sans-serif;font-size:14.5px;font-weight:700;color:#FFF8F0;">Tipo de saída do lote</div>
-                    <div style="font-family:'Plus Jakarta Sans',sans-serif;font-size:12px;color:#554A40;margin-top:2px;">Classifique o motivo — aplicado a todos os itens do lançamento</div>
+        tab_manual, tab_import, tab_mapping = st.tabs(["📤 Registrar Saída", "📥 Importar SWFast", "⚙️ Mapeamento SWFast"])
+        
+        with tab_manual:
+            # ── CARD 1: TIPO DE SAÍDA DO LOTE ───────────────────────────────────
+            st.markdown("""
+            <div style="background:#1A1715;border-radius:12px 12px 0 0;border:1px solid #2A2624;border-bottom:none;">
+                <div style="padding:18px 24px;display:flex;align-items:center;gap:14px;border-bottom:1px solid #2A2624;">
+                    <div style="width:36px;height:36px;background:#2A200B;border:1px solid #4A3510;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px;color:#D99F2A;">🏷️</div>
+                    <div>
+                        <div style="font-family:'Plus Jakarta Sans',sans-serif;font-size:14.5px;font-weight:700;color:#FFF8F0;">Tipo de saída do lote</div>
+                        <div style="font-family:'Plus Jakarta Sans',sans-serif;font-size:12px;color:#554A40;margin-top:2px;">Classifique o motivo — aplicado a todos os itens do lançamento</div>
+                    </div>
                 </div>
             </div>
-        </div>
-        """, unsafe_allow_html=True)
-        st.markdown('<div style="background:#1A1715;border-radius:0 0 12px 12px;border:1px solid #2A2624;border-top:none;padding:24px;margin-bottom:24px;">', unsafe_allow_html=True)
+            """, unsafe_allow_html=True)
+            st.markdown('<div style="background:#1A1715;border-radius:0 0 12px 12px;border:1px solid #2A2624;border-top:none;padding:24px;margin-bottom:24px;">', unsafe_allow_html=True)
 
-        radio_options = [f"{ICONES_SAIDA[i]} {TIPOS_SAIDA[i]}" for i in range(6)]
-        tipo_said_val = st.radio("Tipo de saída", radio_options, index=0, key=f"sai_tipo_{reset_key}", label_visibility="collapsed")
-        tipo_said = ""
-        for i, opt in enumerate(radio_options):
-            if tipo_said_val == opt:
-                tipo_said = TIPOS_SAIDA[i]; break
+            radio_options = [f"{ICONES_SAIDA[i]} {TIPOS_SAIDA[i]}" for i in range(6)]
+            tipo_said_val = st.radio("Tipo de saída", radio_options, index=0, key=f"sai_tipo_{reset_key}", label_visibility="collapsed")
+            tipo_said = ""
+            for i, opt in enumerate(radio_options):
+                if tipo_said_val == opt:
+                    tipo_said = TIPOS_SAIDA[i]; break
 
-        st.markdown('</div>', unsafe_allow_html=True)
+            st.markdown('</div>', unsafe_allow_html=True)
 
-        # ── CARD 2: ADICIONAR ITEM ──────────────────────────────────────────
-        st.markdown("""
-        <div style="background:#1A1715;border-radius:12px 12px 0 0;border:1px solid #2A2624;border-bottom:none;">
-            <div style="padding:18px 24px;display:flex;align-items:center;gap:14px;border-bottom:1px solid #2A2624;">
-                <div style="width:36px;height:36px;background:#3B1219;border:1px solid #5A1A22;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px;color:#EF4444;">📤</div>
-                <div>
-                    <div style="font-family:'Plus Jakarta Sans',sans-serif;font-size:14.5px;font-weight:700;color:#FFF8F0;">Adicionar item ao lançamento</div>
-                    <div style="font-family:'Plus Jakarta Sans',sans-serif;font-size:12px;color:#554A40;margin-top:2px;">Selecione o item e a quantidade — adicione quantos quiser antes de confirmar</div>
+            # ── CARD 2: ADICIONAR ITEM ──────────────────────────────────────────
+            st.markdown("""
+            <div style="background:#1A1715;border-radius:12px 12px 0 0;border:1px solid #2A2624;border-bottom:none;">
+                <div style="padding:18px 24px;display:flex;align-items:center;gap:14px;border-bottom:1px solid #2A2624;">
+                    <div style="width:36px;height:36px;background:#3B1219;border:1px solid #5A1A22;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px;color:#EF4444;">📤</div>
+                    <div>
+                        <div style="font-family:'Plus Jakarta Sans',sans-serif;font-size:14.5px;font-weight:700;color:#FFF8F0;">Adicionar item ao lançamento</div>
+                        <div style="font-family:'Plus Jakarta Sans',sans-serif;font-size:12px;color:#554A40;margin-top:2px;">Selecione o item e a quantidade — adicione quantos quiser antes de confirmar</div>
+                    </div>
                 </div>
             </div>
-        </div>
-        """, unsafe_allow_html=True)
-        st.markdown('<div style="background:#1A1715;border-radius:0 0 12px 12px;border:1px solid #2A2624;border-top:none;padding:24px;margin-bottom:24px;">', unsafe_allow_html=True)
+            """, unsafe_allow_html=True)
+            st.markdown('<div style="background:#1A1715;border-radius:0 0 12px 12px;border:1px solid #2A2624;border-top:none;padding:24px;margin-bottom:24px;">', unsafe_allow_html=True)
 
-        c1, c2 = st.columns(2)
-        with c1:
-            st.markdown('<div style="font-size:10px;font-weight:700;color:#8A7B72;letter-spacing:0.06em;margin-bottom:6px;display:flex;align-items:center;gap:6px;">❓ ITEM <span style="color:#EF4444">*</span></div>', unsafe_allow_html=True)
-            item_sel = st.selectbox("Item", list(op_item), index=None, placeholder="Selecione o item...", key=f"sai_item_{reset_key}", label_visibility="collapsed")
-        with c2:
-            st.markdown('<div style="font-size:10px;font-weight:700;color:#8A7B72;letter-spacing:0.06em;margin-bottom:6px;display:flex;align-items:center;gap:6px;">🔢 QUANTIDADE <span style="color:#EF4444">*</span></div>', unsafe_allow_html=True)
-            qtd = st.number_input("Quantidade", min_value=0.001, step=1.0, format="%.0f", value=None, placeholder="0", key=f"sai_qtd_{reset_key}", label_visibility="collapsed")
+            c1, c2 = st.columns(2)
+            with c1:
+                st.markdown('<div style="font-size:10px;font-weight:700;color:#8A7B72;letter-spacing:0.06em;margin-bottom:6px;display:flex;align-items:center;gap:6px;">❓ ITEM <span style="color:#EF4444">*</span></div>', unsafe_allow_html=True)
+                item_sel = st.selectbox("Item", list(op_item), index=None, placeholder="Selecione o item...", key=f"sai_item_{reset_key}", label_visibility="collapsed")
+            with c2:
+                st.markdown('<div style="font-size:10px;font-weight:700;color:#8A7B72;letter-spacing:0.06em;margin-bottom:6px;display:flex;align-items:center;gap:6px;">🔢 QUANTIDADE <span style="color:#EF4444">*</span></div>', unsafe_allow_html=True)
+                qtd = st.number_input("Quantidade", min_value=0.001, step=1.0, format="%.0f", value=None, placeholder="0", key=f"sai_qtd_{reset_key}", label_visibility="collapsed")
 
-        st.markdown('<div style="font-size:10px;font-weight:700;color:#8A7B72;letter-spacing:0.06em;margin-bottom:6px;margin-top:16px;display:flex;align-items:center;gap:6px;">📝 OBSERVAÇÃO</div>', unsafe_allow_html=True)
-        obs = st.text_input("Observação", placeholder="opcional ➔ detalhe o motivo ou destino", key=f"sai_obs_{reset_key}", label_visibility="collapsed")
+            st.markdown('<div style="font-size:10px;font-weight:700;color:#8A7B72;letter-spacing:0.06em;margin-bottom:6px;margin-top:16px;display:flex;align-items:center;gap:6px;">📝 OBSERVAÇÃO</div>', unsafe_allow_html=True)
+            obs = st.text_input("Observação", placeholder="opcional ➔ detalhe o motivo ou destino", key=f"sai_obs_{reset_key}", label_visibility="collapsed")
 
-        st.markdown('<div style="height:16px;"></div>', unsafe_allow_html=True)
+            st.markdown('<div style="height:16px;"></div>', unsafe_allow_html=True)
 
-        sal = 0; mn = 0; novo = 0; composto = False
+            sal = 0; mn = 0; novo = 0; composto = False
 
-        if item_sel:
-            id_item  = op_item[item_sel]
-            info     = itens[itens["id_item"] == id_item].iloc[0]
-            sal      = saldo_item(id_item)
-            mn       = float(info["estoque_minimo"])
-            q_val    = qtd if qtd is not None else 0.0
-            novo     = sal - q_val
-            composto = is_composto(id_item)
-            composicao = composicao_produto(id_item) if composto else []
+            if item_sel:
+                id_item  = op_item[item_sel]
+                info     = itens[itens["id_item"] == id_item].iloc[0]
+                sal      = saldo_item(id_item)
+                mn       = float(info["estoque_minimo"])
+                q_val    = qtd if qtd is not None else 0.0
+                novo     = sal - q_val
+                composto = is_composto(id_item)
+                composicao = composicao_produto(id_item) if composto else []
+
+                st.markdown(f"""
+                <div style="display:flex;align-items:center;gap:14px;padding:12px 18px;background:#0F1D1A;border-radius:8px;border:1px solid #143A2A;">
+                    <span style="font-size:18px;">✔️</span>
+                    <div>
+                        <div style="font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;color:#2ED297;"><strong style="color:#FFF8F0;">Saldo atual:</strong> {sal:.0f} {info['unidade']}</div>
+                        <div style="font-size:11.5px;color:#1D9E75;margin-top:2px;">Saída: -{q_val:.0f} &nbsp;|&nbsp; Novo saldo: {novo:.0f}</div>
+                    </div>
+                </div>
+                """, unsafe_allow_html=True)
+
+                if composto:
+                    linhas = "".join([
+                        f"<li style='color:#A8A59E;'><b style='color:#FFF8F0;'>{c['id_ingrediente']}</b> — {c['nome_ingrediente']} × {float(c['quantidade'])*q_val:.0f} {c['unidade']}</li>"
+                        for c in composicao
+                    ])
+                    st.markdown(f"<div style='margin-top:12px;padding:12px 16px;background:#141210;border-radius:8px;border:1px solid #332B25;font-size:13px;'>🧩 <b style='color:#A987D9;'>Produto composto</b> — ingredientes descontados:<ul style='margin:6px 0 0 16px'>{linhas}</ul></div>", unsafe_allow_html=True)
+
+                if sal <= 0: st.error(f"🔴 ZERADO! Saldo: {sal:.0f} {info['unidade']}")
+                elif sal <= mn: st.warning(f"🟡 CRÍTICO. Saldo: {sal:.0f} | mín: {mn:.0f}")
+                if novo < 0: st.error(f"⛔ Quantidade maior que o disponível ({sal:.0f}).")
+            else:
+                st.markdown("""
+                <div style="display:flex;align-items:center;gap:12px;padding:14px 18px;background:#2A200B;border-radius:8px;border:1px solid #4A3510;">
+                    <span style="font-size:16px;">💡</span>
+                    <span style="font-size:13px;color:#D99F2A;">Selecione um item para ver o saldo atual e adicioná-lo ao lançamento.</span>
+                </div>
+                """, unsafe_allow_html=True)
+
+            st.markdown('<div style="height:16px;"></div>', unsafe_allow_html=True)
+            col_space, col_add = st.columns([5, 3])
+            with col_add:
+                st.markdown('<div class="btn-add">', unsafe_allow_html=True)
+                if st.button("＋ Adicionar ao lançamento", use_container_width=True, key="btn_add_saida"):
+                    if not item_sel: st.error("Selecione o item.")
+                    elif not tipo_said: st.error("Selecione o tipo de saída.")
+                    elif qtd is None or qtd <= 0: st.error("Quantidade deve ser maior que zero.")
+                    elif novo < 0: st.error(f"Quantidade maior que o disponível ({sal:.0f}).")
+                    else:
+                        id_it = op_item[item_sel]
+                        inf   = itens[itens["id_item"] == id_it].iloc[0]
+                        sal_a = saldo_item(id_it)
+                        st.session_state["carrinho_saida"].append({
+                            "id_item":     id_it,
+                            "nome":        inf["nome"],
+                            "unidade":     inf["unidade"],
+                            "qtd":         qtd,
+                            "saldo_antes": sal_a,
+                            "obs":         obs if obs else "—",
+                            "composto":    is_composto(id_it),
+                        })
+                        st.success(f"✅ **{inf['nome']}** adicionado ao lançamento!")
+                        st.session_state["saida_reset_key"] = reset_key + 1
+                        st.rerun()
+                st.markdown('</div>', unsafe_allow_html=True)
+
+            st.markdown('</div>', unsafe_allow_html=True)
+
+            # ── CARD 3: LISTA DO LANÇAMENTO ─────────────────────────────────────
+            n = len(st.session_state["carrinho_saida"])
+
+            st.markdown("""
+            <div style="background:#1A1715;border-radius:12px 12px 0 0;border:1px solid #2A2624;border-bottom:none;">
+                <div style="padding:18px 24px;display:flex;align-items:center;gap:14px;border-bottom:1px solid #2A2624;">
+                    <div style="width:36px;height:36px;background:#141210;border:1px solid #2A2624;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:18px;color:#EF4444;">📋</div>
+                    <div>
+                        <div style="font-family:'Plus Jakarta Sans',sans-serif;font-size:14.5px;font-weight:700;color:#FFF8F0;">Itens do lançamento</div>
+                        <div style="font-family:'Plus Jakarta Sans',sans-serif;font-size:12px;color:#554A40;margin-top:2px;">Itens adicionados para baixa em lote</div>
+                    </div>
+                </div>
+            </div>
+            """, unsafe_allow_html=True)
+            st.markdown('<div style="background:#1A1715;border-radius:0 0 12px 12px;border:1px solid #2A2624;border-top:none;padding:24px;">', unsafe_allow_html=True)
+
+            if n == 0:
+                st.markdown("""
+                <div style="text-align:center;padding:30px 0;">
+                    <div style="font-size:13px;color:#554A40;">Nenhum item adicionado ao lançamento.</div>
+                </div>
+                """, unsafe_allow_html=True)
+            else:
+                df_cart = pd.DataFrame(st.session_state["carrinho_saida"])
+                df_disp = df_cart[["nome", "qtd", "saldo_antes", "obs"]].copy()
+                df_disp["novo_saldo"] = df_disp["saldo_antes"] - df_disp["qtd"]
+                df_disp.rename(columns={
+                    "nome": "📦 Item", "qtd": "🔢 Qtd",
+                    "saldo_antes": "📊 Saldo Antes", "novo_saldo": "➡️ Novo Saldo", "obs": "💬 Obs.",
+                }, inplace=True)
+                st.dataframe(df_disp, use_container_width=True, hide_index=True, height=min(100 + n * 48, 380))
+
+                st.markdown("<div style='height:16px;'></div>", unsafe_allow_html=True)
+                col_a, col_b, _ = st.columns([2, 2, 6])
+                with col_a:
+                    st.markdown('<div class="btn-cancel">', unsafe_allow_html=True)
+                    if st.button("🗑️ Remover último", use_container_width=True, key="saida_rem_ultimo"):
+                        st.session_state["carrinho_saida"].pop(); st.rerun()
+                    st.markdown('</div>', unsafe_allow_html=True)
+                with col_b:
+                    st.markdown('<div class="btn-cancel">', unsafe_allow_html=True)
+                    if st.button("✕ Limpar tudo", use_container_width=True, key="saida_limpar"):
+                        st.session_state["carrinho_saida"] = []; st.rerun()
+                    st.markdown('</div>', unsafe_allow_html=True)
+
+            st.markdown('</div>', unsafe_allow_html=True)
+
+            # ── FOOTER + CONFIRMAR ───────────────────────────────────────────────
+            indicador_texto = f"{n} item(ns) no lançamento" if n > 0 else "Nenhum item adicionado"
+            indicador_cor   = "#EF4444" if n > 0 else "#554A40"
+
+            if st.session_state.get("msg_saida"):
+                msg = st.session_state.pop("msg_saida")
+                st.success(msg)
 
             st.markdown(f"""
-            <div style="display:flex;align-items:center;gap:14px;padding:12px 18px;background:#0F1D1A;border-radius:8px;border:1px solid #143A2A;">
-                <span style="font-size:18px;">✔️</span>
-                <div>
-                    <div style="font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;color:#2ED297;"><strong style="color:#FFF8F0;">Saldo atual:</strong> {sal:.0f} {info['unidade']}</div>
-                    <div style="font-size:11.5px;color:#1D9E75;margin-top:2px;">Saída: -{q_val:.0f} &nbsp;|&nbsp; Novo saldo: {novo:.0f}</div>
+            <div style="margin-top:30px; border-top:1px solid #332B25; padding-top:20px; display:flex; align-items:center; justify-content:space-between;">
+                <div style="display:flex;align-items:center;gap:10px;">
+                    <div style="width:8px;height:8px;background:{indicador_cor};border-radius:50%; box-shadow: 0 0 6px {indicador_cor}88;"></div>
+                    <span style="font-size:12.5px;color:#8A7B72;">{indicador_texto} · tipo: <b style="color:#FFF8F0;">{tipo_said}</b></span>
                 </div>
             </div>
             """, unsafe_allow_html=True)
 
-            if composto:
-                linhas = "".join([
-                    f"<li style='color:#A8A59E;'><b style='color:#FFF8F0;'>{c['id_ingrediente']}</b> — {c['nome_ingrediente']} × {float(c['quantidade'])*q_val:.0f} {c['unidade']}</li>"
-                    for c in composicao
-                ])
-                st.markdown(f"<div style='margin-top:12px;padding:12px 16px;background:#141210;border-radius:8px;border:1px solid #332B25;font-size:13px;'>🧩 <b style='color:#A987D9;'>Produto composto</b> — ingredientes descontados:<ul style='margin:6px 0 0 16px'>{linhas}</ul></div>", unsafe_allow_html=True)
-
-            if sal <= 0: st.error(f"🔴 ZERADO! Saldo: {sal:.0f} {info['unidade']}")
-            elif sal <= mn: st.warning(f"🟡 CRÍTICO. Saldo: {sal:.0f} | mín: {mn:.0f}")
-            if novo < 0: st.error(f"⛔ Quantidade maior que o disponível ({sal:.0f}).")
-        else:
-            st.markdown("""
-            <div style="display:flex;align-items:center;gap:12px;padding:14px 18px;background:#2A200B;border-radius:8px;border:1px solid #4A3510;">
-                <span style="font-size:16px;">💡</span>
-                <span style="font-size:13px;color:#D99F2A;">Selecione um item para ver o saldo atual e adicioná-lo ao lançamento.</span>
-            </div>
-            """, unsafe_allow_html=True)
-
-        st.markdown('<div style="height:16px;"></div>', unsafe_allow_html=True)
-        col_space, col_add = st.columns([5, 3])
-        with col_add:
-            st.markdown('<div class="btn-add">', unsafe_allow_html=True)
-            if st.button("＋ Adicionar ao lançamento", use_container_width=True, key="btn_add_saida"):
-                if not item_sel: st.error("Selecione o item.")
-                elif not tipo_said: st.error("Selecione o tipo de saída.")
-                elif qtd is None or qtd <= 0: st.error("Quantidade deve ser maior que zero.")
-                elif novo < 0: st.error(f"Quantidade maior que o disponível ({sal:.0f}).")
-                else:
-                    id_it = op_item[item_sel]
-                    inf   = itens[itens["id_item"] == id_it].iloc[0]
-                    sal_a = saldo_item(id_it)
-                    st.session_state["carrinho_saida"].append({
-                        "id_item":     id_it,
-                        "nome":        inf["nome"],
-                        "unidade":     inf["unidade"],
-                        "qtd":         qtd,
-                        "saldo_antes": sal_a,
-                        "obs":         obs if obs else "—",
-                        "composto":    is_composto(id_it),
-                    })
-                    st.success(f"✅ **{inf['nome']}** adicionado ao lançamento!")
-                    st.session_state["saida_reset_key"] = reset_key + 1
-                    st.rerun()
-            st.markdown('</div>', unsafe_allow_html=True)
-
-        st.markdown('</div>', unsafe_allow_html=True)
-
-        # ── CARD 3: LISTA DO LANÇAMENTO ─────────────────────────────────────
-        n = len(st.session_state["carrinho_saida"])
-
-        st.markdown("""
-        <div style="background:#1A1715;border-radius:12px 12px 0 0;border:1px solid #2A2624;border-bottom:none;">
-            <div style="padding:18px 24px;display:flex;align-items:center;gap:14px;border-bottom:1px solid #2A2624;">
-                <div style="width:36px;height:36px;background:#141210;border:1px solid #2A2624;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:18px;color:#EF4444;">📋</div>
-                <div>
-                    <div style="font-family:'Plus Jakarta Sans',sans-serif;font-size:14.5px;font-weight:700;color:#FFF8F0;">Itens do lançamento</div>
-                    <div style="font-family:'Plus Jakarta Sans',sans-serif;font-size:12px;color:#554A40;margin-top:2px;">Itens adicionados para baixa em lote</div>
-                </div>
-            </div>
-        </div>
-        """, unsafe_allow_html=True)
-        st.markdown('<div style="background:#1A1715;border-radius:0 0 12px 12px;border:1px solid #2A2624;border-top:none;padding:24px;">', unsafe_allow_html=True)
-
-        if n == 0:
-            st.markdown("""
-            <div style="text-align:center;padding:30px 0;">
-                <div style="font-size:13px;color:#554A40;">Nenhum item adicionado ao lançamento.</div>
-            </div>
-            """, unsafe_allow_html=True)
-        else:
-            df_cart = pd.DataFrame(st.session_state["carrinho_saida"])
-            df_disp = df_cart[["nome", "qtd", "saldo_antes", "obs"]].copy()
-            df_disp["novo_saldo"] = df_disp["saldo_antes"] - df_disp["qtd"]
-            df_disp.rename(columns={
-                "nome": "📦 Item", "qtd": "🔢 Qtd",
-                "saldo_antes": "📊 Saldo Antes", "novo_saldo": "➡️ Novo Saldo", "obs": "💬 Obs.",
-            }, inplace=True)
-            st.dataframe(df_disp, use_container_width=True, hide_index=True, height=min(100 + n * 48, 380))
-
-            st.markdown("<div style='height:16px;'></div>", unsafe_allow_html=True)
-            col_a, col_b, _ = st.columns([2, 2, 6])
-            with col_a:
+            st.markdown('<div style="height:12px;"></div>', unsafe_allow_html=True)
+            col_space2, col_cancel, col_confirm = st.columns([5, 2, 3])
+            with col_cancel:
                 st.markdown('<div class="btn-cancel">', unsafe_allow_html=True)
-                if st.button("🗑️ Remover último", use_container_width=True, key="saida_rem_ultimo"):
-                    st.session_state["carrinho_saida"].pop(); st.rerun()
-                st.markdown('</div>', unsafe_allow_html=True)
-            with col_b:
-                st.markdown('<div class="btn-cancel">', unsafe_allow_html=True)
-                if st.button("✕ Limpar tudo", use_container_width=True, key="saida_limpar"):
-                    st.session_state["carrinho_saida"] = []; st.rerun()
-                st.markdown('</div>', unsafe_allow_html=True)
-
-        st.markdown('</div>', unsafe_allow_html=True)
-
-        # ── FOOTER + CONFIRMAR ───────────────────────────────────────────────
-        indicador_texto = f"{n} item(ns) no lançamento" if n > 0 else "Nenhum item adicionado"
-        indicador_cor   = "#EF4444" if n > 0 else "#554A40"
-
-        if st.session_state.get("msg_saida"):
-            msg = st.session_state.pop("msg_saida")
-            st.success(msg)
-
-        st.markdown(f"""
-        <div style="margin-top:30px; border-top:1px solid #332B25; padding-top:20px; display:flex; align-items:center; justify-content:space-between;">
-            <div style="display:flex;align-items:center;gap:10px;">
-                <div style="width:8px;height:8px;background:{indicador_cor};border-radius:50%; box-shadow: 0 0 6px {indicador_cor}88;"></div>
-                <span style="font-size:12.5px;color:#8A7B72;">{indicador_texto} · tipo: <b style="color:#FFF8F0;">{tipo_said}</b></span>
-            </div>
-        </div>
-        """, unsafe_allow_html=True)
-
-        st.markdown('<div style="height:12px;"></div>', unsafe_allow_html=True)
-        col_space2, col_cancel, col_confirm = st.columns([5, 2, 3])
-        with col_cancel:
-            st.markdown('<div class="btn-cancel">', unsafe_allow_html=True)
-            if st.button("🗑️ Cancelar", use_container_width=True, key="saida_cancelar"):
-                st.session_state["carrinho_saida"] = []
-                st.session_state["saida_reset_key"] = reset_key + 1
-                st.rerun()
-            st.markdown('</div>', unsafe_allow_html=True)
-        with col_confirm:
-            st.markdown('<div class="btn-confirm">', unsafe_allow_html=True)
-            if st.button("✓ Confirmar baixa em lote", use_container_width=True, key="saida_confirmar"):
-                if n == 0:
-                    st.error("Adicione itens ao lançamento antes de confirmar.")
-                elif not tipo_said:
-                    st.error("Selecione o tipo de saída.")
-                else:
-                    erros = []; ok = 0
-                    for item in st.session_state["carrinho_saida"]:
-                        try:
-                            if item["composto"]:
-                                registrar_saida_composta(item["id_item"], item["qtd"], u["usuario"], motivo=tipo_said, obs=item["obs"])
-                            else:
-                                registrar_movimento("SAÍDA", item["id_item"], item["qtd"], u["usuario"], motivo=tipo_said, obs=item["obs"])
-                            ok += 1
-                        except Exception as e:
-                            erros.append(f"{item['nome']}: {e}")
-                    if erros:
-                        st.session_state["msg_saida"] = f"⚠️ {ok} registrado(s). Erros: {'; '.join(erros)}"
-                    else:
-                        st.session_state["msg_saida"] = f"🎉 **Baixa confirmada!** {ok} item(s) baixado(s). Tipo: {tipo_said}"
+                if st.button("🗑️ Cancelar", use_container_width=True, key="saida_cancelar"):
                     st.session_state["carrinho_saida"] = []
                     st.session_state["saida_reset_key"] = reset_key + 1
                     st.rerun()
+                st.markdown('</div>', unsafe_allow_html=True)
+            with col_confirm:
+                st.markdown('<div class="btn-confirm">', unsafe_allow_html=True)
+                if st.button("✓ Confirmar baixa em lote", use_container_width=True, key="saida_confirmar"):
+                    if n == 0:
+                        st.error("Adicione itens ao lançamento antes de confirmar.")
+                    elif not tipo_said:
+                        st.error("Selecione o tipo de saída.")
+                    else:
+                        erros = []; ok = 0
+                        for item in st.session_state["carrinho_saida"]:
+                            try:
+                                if item["composto"]:
+                                    registrar_saida_composta(item["id_item"], item["qtd"], u["usuario"], motivo=tipo_said, obs=item["obs"])
+                                else:
+                                    registrar_movimento("SAÍDA", item["id_item"], item["qtd"], u["usuario"], motivo=tipo_said, obs=item["obs"])
+                                ok += 1
+                            except Exception as e:
+                                erros.append(f"{item['nome']}: {e}")
+                        if erros:
+                            st.session_state["msg_saida"] = f"⚠️ {ok} registrado(s). Erros: {'; '.join(erros)}"
+                        else:
+                            st.session_state["msg_saida"] = f"🎉 **Baixa confirmada!** {ok} item(s) baixado(s). Tipo: {tipo_said}"
+                        st.session_state["carrinho_saida"] = []
+                        st.session_state["saida_reset_key"] = reset_key + 1
+                        st.rerun()
+                st.markdown('</div>', unsafe_allow_html=True)
+
+        with tab_import:
+            st.markdown("<br>", unsafe_allow_html=True)
+            
+            # Workflow / Guia Rápido
+            col_g1, col_g2, col_g3 = st.columns(3)
+            with col_g1:
+                st.markdown("""
+                <div class="flow-step-card">
+                    <div class="flow-step-icon">1</div>
+                    <div>
+                        <div style="font-size:11px;font-weight:700;color:#8A7B72;letter-spacing:0.05em;text-transform:uppercase;">VÍNCULOS</div>
+                        <div style="font-size:12.5px;color:#FFF8F0;margin-top:2px;font-weight:600;">Mapear códigos</div>
+                    </div>
+                </div>
+                """, unsafe_allow_html=True)
+            with col_g2:
+                st.markdown("""
+                <div class="flow-step-card">
+                    <div class="flow-step-icon">2</div>
+                    <div>
+                        <div style="font-size:11px;font-weight:700;color:#8A7B72;letter-spacing:0.05em;text-transform:uppercase;">SWFAST</div>
+                        <div style="font-size:12.5px;color:#FFF8F0;margin-top:2px;font-weight:600;">Exportar PDF/Excel</div>
+                    </div>
+                </div>
+                """, unsafe_allow_html=True)
+            with col_g3:
+                st.markdown("""
+                <div class="flow-step-card">
+                    <div class="flow-step-icon">3</div>
+                    <div>
+                        <div style="font-size:11px;font-weight:700;color:#8A7B72;letter-spacing:0.05em;text-transform:uppercase;">ERP</div>
+                        <div style="font-size:12.5px;color:#FFF8F0;margin-top:2px;font-weight:600;">Upload e Baixa</div>
+                    </div>
+                </div>
+                """, unsafe_allow_html=True)
+                
+            st.markdown("<div style='height:20px;'></div>", unsafe_allow_html=True)
+            
+            st.markdown("""
+            <div style="background:#1A1715;border-radius:12px 12px 0 0;border:1px solid #2A2624;border-bottom:none;">
+                <div style="padding:18px 24px;display:flex;align-items:center;gap:14px;border-bottom:1px solid #2A2624;">
+                    <div style="width:36px;height:36px;background:#142240;border:1px solid #2A3A60;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px;color:#7BA1F2;">📥</div>
+                    <div>
+                        <div style="font-family:'Plus Jakarta Sans',sans-serif;font-size:14.5px;font-weight:700;color:#FFF8F0;">Importar relatório diário</div>
+                        <div style="font-family:'Plus Jakarta Sans',sans-serif;font-size:12px;color:#554A40;margin-top:2px;">Formatos suportados: PDF e Planilhas Excel (.xlsx, .xls) do SWFast</div>
+                    </div>
+                </div>
+            </div>
+            """, unsafe_allow_html=True)
+            st.markdown('<div style="background:#1A1715;border-radius:0 0 12px 12px;border:1px solid #2A2624;border-top:none;padding:24px;margin-bottom:24px;">', unsafe_allow_html=True)
+            
+            st.markdown('<div translate="no">', unsafe_allow_html=True)
+            arq_upload = st.file_uploader("Selecione o arquivo do SWFast", type=["pdf", "xlsx", "xls"], key="swfast_uploader", label_visibility="collapsed")
+            st.markdown('</div>', unsafe_allow_html=True)
+            
+            if arq_upload is not None:
+                from utils.swfast_parser import parse_swfast_file
+                from utils.data import listar_mapeamentos, saldo_item, registrar_saida_em_lote
+                
+                try:
+                    arq_upload.seek(0)
+                    items_parsed = parse_swfast_file(arq_upload, arq_upload.name)
+                    
+                    if not items_parsed:
+                        st.warning("⚠️ Nenhum item de consumo foi encontrado no relatório enviado.")
+                    else:
+                        st.markdown(f"""
+                        <div style='display:flex;align-items:center;gap:12px;padding:12px 18px;background:#0F1D1A;border-radius:8px;border:1px solid #143A2A;margin-bottom:20px;'>
+                            <span style='font-size:16px;'>✅</span>
+                            <span style='color:#2ED297;font-size:13px;font-weight:600;'>Leitura concluída! Encontrados <b>{len(items_parsed)}</b> itens no arquivo.</span>
+                        </div>
+                        """, unsafe_allow_html=True)
+                        
+                        df_maps = listar_mapeamentos()
+                        if df_maps.empty:
+                            st.error("⚠️ Nenhum mapeamento cadastrado no banco. Vincule os códigos na aba 'Mapeamento SWFast' antes de processar.")
+                        else:
+                            mapped_rows = []
+                            unmapped_rows = []
+                            
+                            map_dict = {str(row["codigo_swfast"]): row["id_item"] for _, row in df_maps.iterrows()}
+                            itens_df = listar_itens()
+                            itens_dict = {row["id_item"]: row for _, row in itens_df.iterrows()}
+                            
+                            for item in items_parsed:
+                                code = str(item["codigo_swfast"])
+                                desc = item["nome_swfast"]
+                                qty = item["quantidade"]
+                                
+                                if code in map_dict:
+                                    id_item = map_dict[code]
+                                    item_info = itens_dict.get(id_item, None)
+                                    if item_info is not None:
+                                        saldo_at = saldo_item(id_item)
+                                        novo_sal = saldo_at - qty
+                                        mapped_rows.append({
+                                            "Código SWFast": code,
+                                            "Item SWFast": desc,
+                                            "Código ERP": id_item,
+                                            "Produto ERP": item_info["nome"],
+                                            "Quantidade": qty,
+                                            "Unidade": item_info["unidade"],
+                                            "Saldo Atual": saldo_at,
+                                            "Novo Saldo": novo_sal
+                                        })
+                                    else:
+                                        unmapped_rows.append({
+                                            "Código SWFast": code,
+                                            "Item SWFast": desc,
+                                            "Quantidade": qty,
+                                            "Motivo": f"Item {id_item} não existe no ERP"
+                                        })
+                                else:
+                                    unmapped_rows.append({
+                                        "Código SWFast": code,
+                                        "Item SWFast": desc,
+                                        "Quantidade": qty,
+                                        "Motivo": "Não mapeado"
+                                    })
+                            
+                            # Exibe tabela de baixas
+                            if mapped_rows:
+                                st.markdown("<h5 style='color:#FFF8F0;font-family:\'Plus Jakarta Sans\',sans-serif;margin-top:10px;margin-bottom:10px;'>📋 Pré-visualização da Baixa</h5>", unsafe_allow_html=True)
+                                df_mapped = pd.DataFrame(mapped_rows)
+                                df_disp = df_mapped[["Código SWFast", "Item SWFast", "Código ERP", "Produto ERP", "Quantidade", "Unidade", "Saldo Atual", "Novo Saldo"]].copy()
+                                
+                                st.dataframe(
+                                    df_disp,
+                                    use_container_width=True,
+                                    hide_index=True,
+                                    height=min(100 + len(mapped_rows) * 38, 380)
+                                )
+                                
+                                neg_count = sum(1 for r in mapped_rows if r["Novo Saldo"] < 0)
+                                if neg_count > 0:
+                                    st.warning(f"⚠️ Atenção: {neg_count} item(ns) ficarão com saldo de estoque negativo após a confirmação.")
+                                    
+                                st.markdown("<div style='height:16px'></div>", unsafe_allow_html=True)
+                                col_btn1, col_btn2 = st.columns([7, 3])
+                                with col_btn2:
+                                    st.markdown('<div class="btn-confirm">', unsafe_allow_html=True)
+                                    if st.button("✓ Confirmar Baixa em Lote", use_container_width=True, key="btn_confirm_lote"):
+                                        lote = [{"id_item": r["Código ERP"], "quantidade": r["Quantidade"]} for r in mapped_rows]
+                                        try:
+                                            registrar_saida_em_lote(lote, u["usuario"], motivo="Importação SWFast", obs=f"Importação de {arq_upload.name}")
+                                            st.success(f"🎉 **Baixa realizada!** {len(mapped_rows)} itens processados no estoque.")
+                                            import time
+                                            time.sleep(1.5)
+                                            st.rerun()
+                                        except Exception as err:
+                                            st.error(f"Erro ao processar lote: {err}")
+                                    st.markdown('</div>', unsafe_allow_html=True)
+                            else:
+                                st.warning("Nenhum item do arquivo pôde ser mapeado para o ERP.")
+                                
+                            # Exibe itens não mapeados
+                            if unmapped_rows:
+                                st.markdown("<div style='height:16px'></div>", unsafe_allow_html=True)
+                                with st.expander(f"⚠️ Itens não mapeados / ignorados ({len(unmapped_rows)})"):
+                                    df_unmapped = pd.DataFrame(unmapped_rows)
+                                    st.dataframe(
+                                        df_unmapped[["Código SWFast", "Item SWFast", "Quantidade", "Motivo"]],
+                                        use_container_width=True,
+                                        hide_index=True,
+                                        height=min(100 + len(unmapped_rows) * 38, 250)
+                                    )
+                                    st.caption("Dica: Cadastre os códigos acima na aba 'Mapeamento SWFast' para que entrem nas próximas baixas.")
+                                    
+                except Exception as ex:
+                    st.error(f"Erro ao processar arquivo: {ex}")
             st.markdown('</div>', unsafe_allow_html=True)
 
+        with tab_mapping:
+            st.markdown("<br>", unsafe_allow_html=True)
+            
+            # Formulário para cadastrar mapeamento
+            st.markdown("""
+            <div style="background:#1A1715;border-radius:12px 12px 0 0;border:1px solid #2A2624;border-bottom:none;">
+                <div style="padding:18px 24px;display:flex;align-items:center;gap:14px;border-bottom:1px solid #2A2624;">
+                    <div style="width:36px;height:36px;background:#2A1F08;border:1px solid #4A3510;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px;color:#D99F2A;">➕</div>
+                    <div>
+                        <div style="font-family:'Plus Jakarta Sans',sans-serif;font-size:14.5px;font-weight:700;color:#FFF8F0;">Adicionar novo vínculo</div>
+                        <div style="font-family:'Plus Jakarta Sans',sans-serif;font-size:12px;color:#554A40;margin-top:2px;">Associe chaves do SWFast a itens do ERP</div>
+                    </div>
+                </div>
+            </div>
+            """, unsafe_allow_html=True)
+            st.markdown('<div style="background:#1A1715;border-radius:0 0 12px 12px;border:1px solid #2A2624;border-top:none;padding:24px;margin-bottom:24px;">', unsafe_allow_html=True)
+            
+            with st.form("form_novo_mapeamento", clear_on_submit=True):
+                col_c1, col_c2, col_c3 = st.columns([2, 4, 4])
+                with col_c1:
+                    cod_sw = st.text_input("Código no SWFast", placeholder="Ex: 50908")
+                with col_c2:
+                    nom_sw = st.text_input("Nome/Descrição no SWFast", placeholder="Ex: INS COCA COLA LATA")
+                with col_c3:
+                    itens_list = listar_itens()
+                    op_itens_map = {f"{r['id_item']} — {r['nome']} ({r['unidade']})": r['id_item'] for _, r in itens_list.iterrows()}
+                    item_erp = st.selectbox("Item Correspondente no ERP", list(op_itens_map), index=None, placeholder="Selecione o item...")
+                
+                submitted = st.form_submit_button("✓ Salvar Vínculo")
+                if submitted:
+                    if not cod_sw or not nom_sw or not item_erp:
+                        st.error("Preencha todos os campos para salvar.")
+                    else:
+                        from utils.data import salvar_mapeamento
+                        salvar_mapeamento(cod_sw.strip(), nom_sw.strip(), op_itens_map[item_erp])
+                        st.success(f"Mapeamento salvo: {cod_sw} ➡️ {op_itens_map[item_erp]}")
+                        import time
+                        time.sleep(1)
+                        st.rerun()
+            st.markdown('</div>', unsafe_allow_html=True)
+            
+            # Lista mapeamentos atuais com filtro de busca
+            st.markdown("""
+            <div style="background:#1A1715;border-radius:12px 12px 0 0;border:1px solid #2A2624;border-bottom:none;">
+                <div style="padding:18px 24px;display:flex;align-items:center;gap:14px;border-bottom:1px solid #2A2624;">
+                    <div style="width:36px;height:36px;background:#1A1715;border:1px solid #2A2624;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px;color:#8A7B72;">📋</div>
+                    <div>
+                        <div style="font-family:'Plus Jakarta Sans',sans-serif;font-size:14.5px;font-weight:700;color:#FFF8F0;">Mapeamentos Cadastrados</div>
+                        <div style="font-family:'Plus Jakarta Sans',sans-serif;font-size:12px;color:#554A40;margin-top:2px;">Consulte ou remova vínculos existentes</div>
+                    </div>
+                </div>
+            </div>
+            """, unsafe_allow_html=True)
+            st.markdown('<div style="background:#1A1715;border-radius:0 0 12px 12px;border:1px solid #2A2624;border-top:none;padding:24px;">', unsafe_allow_html=True)
+            
+            busca_map = st.text_input("🔍 Buscar mapeamento...", placeholder="Digite código, nome SWFast ou item do ERP...", key="busca_map_input")
+            
+            from utils.data import listar_mapeamentos
+            df_maps = listar_mapeamentos()
+            if df_maps.empty:
+                st.info("Nenhum mapeamento cadastrado.")
+            else:
+                itens_df = listar_itens()[["id_item", "nome", "unidade"]]
+                df_maps_merged = df_maps.merge(itens_df, on="id_item", how="left").fillna("")
+                
+                # Filtragem da busca
+                if busca_map:
+                    b_low = busca_map.lower()
+                    df_maps_merged = df_maps_merged[
+                        df_maps_merged["codigo_swfast"].astype(str).str.lower().str.contains(b_low) |
+                        df_maps_merged["nome_swfast"].str.lower().str.contains(b_low) |
+                        df_maps_merged["id_item"].str.lower().str.contains(b_low) |
+                        df_maps_merged["nome"].str.lower().str.contains(b_low)
+                    ]
+                
+                if df_maps_merged.empty:
+                    st.warning("Nenhum mapeamento encontrado para esta busca.")
+                else:
+                    st.markdown("<div style='max-height: 400px; overflow-y: auto; padding-right: 8px;'>", unsafe_allow_html=True)
+                    for idx, r in df_maps_merged.iterrows():
+                        col_m1, col_m2, col_m3, col_m4 = st.columns([1.5, 3.5, 4, 1])
+                        with col_m1:
+                            st.code(r["codigo_swfast"])
+                        with col_m2:
+                            st.markdown(f"<span style='color:#FFF8F0;font-size:13px;'>{r['nome_swfast']}</span>", unsafe_allow_html=True)
+                        with col_m3:
+                            st.markdown(f"<span style='color:#8A7B72;font-size:13px;'>➡️ <b>{r['id_item']}</b> — {r['nome']} ({r['unidade']})</span>", unsafe_allow_html=True)
+                        with col_m4:
+                            if st.button("🗑️", key=f"del_map_{r['codigo_swfast']}", use_container_width=True):
+                                from utils.data import remover_mapeamento
+                                remover_mapeamento(r["codigo_swfast"])
+                                st.toast(f"Removido mapeamento {r['codigo_swfast']}", icon="🗑️")
+                                st.rerun()
+                        st.markdown("<div style='height:8px;border-bottom:1px solid #2D2624;margin-bottom:8px;'></div>", unsafe_allow_html=True)
+                    st.markdown("</div>", unsafe_allow_html=True)
+            st.markdown('</div>', unsafe_allow_html=True)
     # ── AJUSTE ───────────────────────────────────────────
     MOTIVOS_AJUSTE  = ["Inventário", "Divergência", "Erro de sistema", "Avaria", "Recontagem", "Outro"]
     ICONES_AJUSTE   = ["📋", "⚠️", "💻", "📦", "🔄", "🟠"]
