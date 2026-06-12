@@ -2352,7 +2352,7 @@ with col_conteudo:
                     st.rerun()
                 st.markdown('</div>', unsafe_allow_html=True)
 
-        aba1, aba2 = st.tabs(["📦 Estoque Atual", "📋 Histórico"])
+        aba1, aba2, aba3 = st.tabs(["📦 Estoque Atual", "🕐 Estoque por Data", "📋 Histórico de Movimentos"])
 
         with aba1:
             df = listar_estoque()
@@ -2491,6 +2491,115 @@ with col_conteudo:
             """, unsafe_allow_html=True)
 
         with aba2:
+            st.markdown('<div style="height:8px;"></div>', unsafe_allow_html=True)
+            st.markdown("""
+            <div style="background:linear-gradient(135deg,#1A1A2E,#16213E);border:1px solid #2A3A60;border-radius:14px;padding:20px 24px;margin-bottom:20px;">
+                <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px;">
+                    <span style="font-size:24px;">🕐</span>
+                    <div>
+                        <div style="font-size:16px;font-weight:700;color:#7BA1F2;">Estoque Retroativo por Data</div>
+                        <div style="font-size:12px;color:#4A6A9A;margin-top:2px;">Consulte qual era o saldo de cada item do estoque em qualquer data do passado</div>
+                    </div>
+                </div>
+            </div>
+            """, unsafe_allow_html=True)
+
+            hoje_tm = date.today()
+            col_tm1, col_tm2 = st.columns([3, 7])
+            with col_tm1:
+                data_ref = st.date_input("📅 Selecione a data de referência", value=hoje_tm - timedelta(days=1), max_value=hoje_tm, key="consulta_tm_data")
+
+            # Reconstrói saldo: pega saldo atual e desfaz movimentos APÓS data_ref
+            df_base = listar_estoque()
+            itens_c = listar_itens()
+            movs_all = listar_movimentos(limit=10000)
+
+            if not df_base.empty:
+                if not itens_c.empty:
+                    cols_c = [c for c in ["id_item", "estoque_minimo", "categoria", "unidade"] if c in itens_c.columns]
+                    df_base = df_base.merge(itens_c[cols_c], on="id_item", how="left")
+
+                df_base["s"] = pd.to_numeric(df_base["saldo_atual"], errors="coerce").fillna(0)
+                df_base["mn"] = pd.to_numeric(df_base.get("estoque_minimo", 0), errors="coerce").fillna(0)
+
+                movs_depois = pd.DataFrame()
+                if not movs_all.empty:
+                    movs_depois = movs_all[movs_all["timestamp"].dt.date > data_ref]
+
+                delta_por_item = {}
+                if not movs_depois.empty:
+                    for _, mv in movs_depois.iterrows():
+                        iid = mv["id_item"]
+                        qtd = float(mv.get("quantidade", 0) or 0)
+                        tipo = mv["tipo"]
+                        if tipo == "ENTRADA":
+                            delta_por_item[iid] = delta_por_item.get(iid, 0) - qtd
+                        elif tipo == "SAÍDA":
+                            delta_por_item[iid] = delta_por_item.get(iid, 0) + qtd
+
+                rows_tm = []
+                for _, r in df_base.iterrows():
+                    iid = r["id_item"]
+                    s_atual = float(r["s"])
+                    delta = delta_por_item.get(iid, 0)
+                    s_hist = max(0, s_atual + delta)
+                    rows_tm.append({
+                        "Status": status_item(s_hist, float(r["mn"])),
+                        "Código": iid,
+                        "Produto": r["nome"],
+                        "Categoria": r.get("categoria", ""),
+                        "Saldo na Data": s_hist,
+                        "Mínimo": float(r["mn"]),
+                        "Und": r.get("unidade", "")
+                    })
+
+                df_tm = pd.DataFrame(rows_tm)
+
+                st.markdown('<div style="display:flex;align-items:center;gap:12px;margin-top:16px;margin-bottom:16px;">', unsafe_allow_html=True)
+                c_busca_tm, c_cat_tm = st.columns([5, 3])
+                with c_busca_tm:
+                    busca_tm = st.text_input("Buscar produto retroativo", placeholder="🔍 Buscar por nome ou código...", key="b_tm", label_visibility="collapsed")
+                with c_cat_tm:
+                    cats_tm = ["Todas as categorias"] + sorted(df_tm["Categoria"].dropna().unique().tolist())
+                    cat_tm = st.selectbox("Categoria retroativa", cats_tm, key="c_tm", label_visibility="collapsed")
+                st.markdown('</div>', unsafe_allow_html=True)
+
+                dt_tm_filtrado = df_tm.copy()
+                if busca_tm:
+                    m_tm = (dt_tm_filtrado["Código"].str.contains(busca_tm, case=False, na=False) |
+                            dt_tm_filtrado["Produto"].str.contains(busca_tm, case=False, na=False))
+                    dt_tm_filtrado = dt_tm_filtrado[m_tm]
+                if cat_tm != "Todas as categorias":
+                    dt_tm_filtrado = dt_tm_filtrado[dt_tm_filtrado["Categoria"] == cat_tm]
+
+                st.markdown('<div style="border-radius:12px;overflow:hidden;border:1px solid #2A2624;">', unsafe_allow_html=True)
+                st.dataframe(
+                    dt_tm_filtrado,
+                    use_container_width=True,
+                    hide_index=True,
+                    column_config={
+                        "Saldo na Data": st.column_config.NumberColumn(format="%.0f"),
+                        "Mínimo": st.column_config.NumberColumn(format="%.0f"),
+                    }
+                )
+                st.markdown('</div>', unsafe_allow_html=True)
+
+                csv_tm = dt_tm_filtrado.to_csv(index=False, sep=";").encode("utf-8-sig")
+                st.markdown('<div style="height:12px;"></div>', unsafe_allow_html=True)
+                col_btn_tm, _ = st.columns([4, 6])
+                with col_btn_tm:
+                    st.markdown('<div class="btn-export">', unsafe_allow_html=True)
+                    st.download_button(
+                        f"📊 Exportar planilha do dia {data_ref.strftime('%d/%m/%Y')}",
+                        csv_tm,
+                        f"estoque_{data_ref.strftime('%Y%m%d')}.csv",
+                        "text/csv",
+                        key="dl_csv_tm",
+                        use_container_width=True
+                    )
+                    st.markdown('</div>', unsafe_allow_html=True)
+
+        with aba3:
             dm = listar_movimentos()
             if dm.empty:
                 st.info("Nenhum movimento ainda.")
