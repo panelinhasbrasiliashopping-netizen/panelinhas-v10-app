@@ -263,7 +263,7 @@ hr {
 ::-webkit-scrollbar-thumb:hover { background: rgba(232, 93, 12, 0.4); }
 
 /* ── Coluna do Menu Lateral (fundo escuro em toda a coluna) ── */
-[data-testid="stHorizontalBlock"] > [data-testid="stColumn"]:first-child {
+[data-testid="stColumn"]:has(.sidebar-marker) {
     background: linear-gradient(180deg, #151515 0%, #1A1A1A 60%, #1E1E1E 100%) !important;
     border-right: 2px solid rgba(232, 93, 12, 0.3) !important;
     padding: 12px 8px 16px !important;
@@ -271,7 +271,7 @@ hr {
     border-radius: 0 !important;
 }
 /* Garante que botões dentro da coluna do menu herdem o estilo escuro */
-[data-testid="stHorizontalBlock"] > [data-testid="stColumn"]:first-child .stButton > button[kind="secondary"] {
+[data-testid="stColumn"]:has(.sidebar-marker) .stButton > button[kind="secondary"] {
     background: rgba(255,255,255,0.03) !important;
     border: none !important;
     border-left: 3px solid transparent !important;
@@ -286,13 +286,13 @@ hr {
     margin-bottom: 3px !important;
     transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1) !important;
 }
-[data-testid="stHorizontalBlock"] > [data-testid="stColumn"]:first-child .stButton > button[kind="secondary"]:hover {
+[data-testid="stColumn"]:has(.sidebar-marker) .stButton > button[kind="secondary"]:hover {
     background: rgba(232, 93, 12, 0.1) !important;
     color: #fff !important;
     border-left: 3px solid #E85D0C !important;
     transform: translateX(3px) !important;
 }
-[data-testid="stHorizontalBlock"] > [data-testid="stColumn"]:first-child .stButton > button[kind="primary"] {
+[data-testid="stColumn"]:has(.sidebar-marker) .stButton > button[kind="primary"] {
     background: linear-gradient(135deg, rgba(232,93,12,0.18) 0%, rgba(232,93,12,0.08) 100%) !important;
     color: #FF8A3D !important;
     border: none !important;
@@ -309,7 +309,7 @@ hr {
     transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1) !important;
     transform: none !important;
 }
-[data-testid="stHorizontalBlock"] > [data-testid="stColumn"]:first-child .stButton > button[kind="primary"]:hover {
+[data-testid="stColumn"]:has(.sidebar-marker) .stButton > button[kind="primary"]:hover {
     background: linear-gradient(135deg, rgba(232,93,12,0.25) 0%, rgba(232,93,12,0.12) 100%) !important;
     transform: translateX(3px) !important;
     box-shadow: none !important;
@@ -689,6 +689,7 @@ def ir(dest):
 col_menu, col_conteudo = st.columns([1, 4], gap="small")
 
 with col_menu:
+    st.markdown('<div class="sidebar-marker"></div>', unsafe_allow_html=True)
     # Logo + User card (o fundo escuro vem do CSS aplicado na coluna)
     st.markdown(f"""
         <div style="
