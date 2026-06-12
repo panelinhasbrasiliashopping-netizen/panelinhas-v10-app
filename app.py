@@ -813,8 +813,9 @@ with col_conteudo:
             display: none !important; /* Esconde nativas */
         }
         
-        /* Botão Adicionar ao lançamento (Outline/Azulado) */
-        .btn-add > div > button {
+
+                /* Botão Adicionar ao lançamento (Outline/Azulado) */
+        .btn-add button {
             background: rgba(43,76,140,0.15) !important;
             color: #7BA1F2 !important;
             border: 1px solid rgba(43,76,140,0.4) !important;
@@ -824,14 +825,14 @@ with col_conteudo:
             height: 44px !important;
             transition: all 0.2s !important;
         }
-        .btn-add > div > button:hover {
+        .btn-add button:hover {
             background: rgba(43,76,140,0.25) !important;
             border-color: rgba(43,76,140,0.6) !important;
             color: #93B2F4 !important;
         }
         
         /* Botão Confirmar (Laranja) */
-        .btn-confirm > div > button {
+        .btn-confirm button {
             background: #E85D04 !important;
             color: #ffffff !important;
             border: none !important;
@@ -841,12 +842,12 @@ with col_conteudo:
             height: 44px !important;
             transition: all 0.2s !important;
         }
-        .btn-confirm > div > button:hover {
+        .btn-confirm button:hover {
             background: #FF6B1A !important;
         }
         
         /* Botão Cancelar (Cinza) */
-        .btn-cancel > div > button {
+        .btn-cancel button {
             background: transparent !important;
             color: #8A7B72 !important;
             border: 1px solid #332B25 !important;
@@ -856,12 +857,12 @@ with col_conteudo:
             height: 44px !important;
             transition: all 0.2s !important;
         }
-        .btn-cancel > div > button:hover {
+        .btn-cancel button:hover {
             background: #1A1715 !important;
             color: #FFF8F0 !important;
             border-color: #554A40 !important;
         }
-        
+
         .stDataFrame {
             border-radius: 12px !important;
             overflow: hidden !important;
