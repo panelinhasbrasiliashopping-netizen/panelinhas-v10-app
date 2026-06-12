@@ -2297,6 +2297,9 @@ with col_conteudo:
         }
 
         /* Botão Exportar */
+        div.element-container:has(.btn-export) + div.element-container button,
+        div.element-container:has(.btn-export) button,
+        .btn-export button,
         .btn-export > div > button {
             background: #1A1715 !important;
             color: #FFF8F0 !important;
@@ -2305,10 +2308,15 @@ with col_conteudo:
             font-size: 13px !important;
             font-weight: 600 !important;
             height: 40px !important;
+            transition: all 0.2s ease !important;
         }
+        div.element-container:has(.btn-export) + div.element-container button:hover,
+        div.element-container:has(.btn-export) button:hover,
+        .btn-export button:hover,
         .btn-export > div > button:hover {
             background: #332B25 !important;
             border-color: #554A40 !important;
+            color: #fff !important;
         }
 
         .stDataFrame { border-radius: 0 0 12px 12px !important; border: 1px solid #2A2624 !important; }
