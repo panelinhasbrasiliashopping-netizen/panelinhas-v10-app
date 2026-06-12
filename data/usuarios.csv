@@ -1,0 +1,4 @@
+usuario,senha,perfil,nome_completo,ativo
+admin,admin123,admin,Administrador,Sim
+gerente,gerente123,gerente,Gerente Geral,Sim
+operador,op123,operador,Operador Padrão,Sim

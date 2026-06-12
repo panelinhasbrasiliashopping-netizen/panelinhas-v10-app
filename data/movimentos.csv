@@ -1,0 +1,24 @@
+id,timestamp,tipo,id_item,nome_item,quantidade,valor_unit,total,fornecedor_id,motivo,operador,obs
+MOV-00001,2026-05-22 15:39:06,ENTRADA,ING-001,Arroz Branco,20.0,20.0,400.0,FOR-001,Compra,admin,NF:teste 2 AAAAAAAAA
+MOV-00002,2026-05-22 15:39:37,SAÍDA,ING-001,Arroz Branco,5.0,0.0,0.0,,Consumo Funcionário,admin,
+MOV-00003,2026-05-22 15:39:39,SAÍDA,ING-001,Arroz Branco,5.0,0.0,0.0,,Consumo Funcionário,admin,
+MOV-00004,2026-05-22 15:39:43,SAÍDA,ING-001,Arroz Branco,5.0,0.0,0.0,,Consumo Funcionário,admin,
+MOV-00005,2026-05-22 15:40:12,ENTRADA,HRT-001,Couve Higienizada,5.0,2.0,10.0,FOR-001,Compra,admin,NF:
+MOV-00006,2026-05-26 14:41:09,ENTRADA,EMB-001,Embalagem Seladora 20x30,2000.0,111.0,222000.0,FOR-003,Compra,admin,NF:swd asae
+MOV-00007,2026-05-26 14:42:03,ENTRADA,ING-003,Arroz com Alcatrao,40.0,3.0,120.0,FOR-002,Compra,admin,NF:
+MOV-00008,2026-05-26 14:42:07,ENTRADA,ING-001,Arroz Branco,30.0,3.0,90.0,FOR-002,Compra,admin,NF:
+MOV-00009,2026-05-26 14:42:11,ENTRADA,ING-002,Arroz com Caldo de Carne,50.0,4.0,200.0,FOR-002,Compra,admin,NF:ASD
+MOV-00010,2026-05-26 14:42:42,SAÍDA,HRT-001,Couve Higienizada,3.0,0.0,0.0,,Consumo Funcionário,admin,comero
+MOV-00011,2026-05-26 14:42:58,AJUSTE_NEG,HRT-001,Couve Higienizada,1.0,0.0,0.0,,Erro de Lançamento,admin,
+MOV-00012,2026-05-26 15:20:28,ENTRADA,ING-010,Moqueca de Banana da Terra,50.0,20.0,1000.0,FOR-004,Compra,admin,NF:teste 2
+MOV-00013,2026-05-27 09:27:23,ENTRADA,EMB-001,Embalagem Seladora 20x30,15.0,0.0,0.0,FOR-003,Compra,admin,NF:— —
+MOV-00014,2026-05-27 10:22:19,ENTRADA,ING-015,Filezinho de Frango,50.0,50.0,2500.0,FOR-002,Compra,admin,NF:— —
+MOV-00015,2026-05-27 10:22:23,ENTRADA,ING-002,Arroz com Caldo de Carne,50.0,0.0,0.0,FOR-002,Compra,admin,NF:— —
+MOV-00016,2026-05-27 10:26:59,SAÍDA,ING-001,Arroz Branco,5.0,0.0,0.0,,Consumo,admin,COMI TUDO
+MOV-00017,2026-05-27 10:27:22,SAÍDA,ING-015,Filezinho de Frango,5.0,0.0,0.0,,Descarte,admin,
+MOV-00018,2026-05-27 10:30:23,AJUSTE_POS,HRT-001,Couve Higienizada,49.0,0.0,0.0,,Inventário,admin,
+MOV-00019,2026-05-27 10:56:21,SAÍDA,HRT-001,Couve Higienizada,10.0,0.0,0.0,,Baixa manual,gerente,
+MOV-00020,2026-05-27 10:56:48,AJUSTE_POS,OPR-001,Luva Descartavel M,200.0,0.0,0.0,,Recontagem,gerente,
+MOV-00021,2026-05-28 12:19:41,ENTRADA,ING-001,Arroz Branco,1.0,0.0,0.0,,,admin,Teste de velocidade
+MOV-00022,2026-05-28 12:22:57,ENTRADA,PAN-001,BANANA CARAMELIZADA,1.0,0.0,0.0,FOR-001,NF: teste,admin,admin
+MOV-00023,2026-05-28 12:23:36,SAÍDA,PAN-001,BANANA CARAMELIZADA,1.0,0.0,0.0,,Outro,admin,comi

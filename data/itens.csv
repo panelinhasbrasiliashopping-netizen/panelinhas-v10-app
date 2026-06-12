@@ -1,0 +1,125 @@
+id_item,nome,descricao,categoria,subcategoria,unidade,local,estoque_minimo,estoque_maximo,custo_unitario,fornecedor_id,ativo,obs
+HRT-001,Couve Higienizada,Couve Manteiga Cortada e Higienizada,Hortifruti,Folhosa,KG,Geladeira,2,20,8.5,FOR-002,Ativo,Preco variavel
+EMB-001,Embalagem Seladora 20x30,Embalagem Plastica Seladora 20x30cm,Embalagem,Embalagem Seladora,UN,Estoque Seco,100,500,0.18,FOR-003,Ativo,Pacote c/ 100un
+OPR-001,Luva Descartavel M,Luva Descartavel Tamanho M Sem Po,Operacional,EPI,UN,Estoque Seco,50,300,0.45,FOR-001,Ativo,Caixa com 100 unidades
+ING-001,Arroz Branco,Arroz Branco Porcionado,Ingrediente,Base,UN,Camara Fria,50,500,0.0,FOR-001,Ativo,Porcao individual
+ING-002,Arroz com Caldo de Carne,Arroz com Caldo de Carne Porcionado,Ingrediente,Base,UN,Camara Fria,50,500,0.0,FOR-001,Ativo,Porcao individual
+ING-003,Arroz com Alcatrao,Arroz com Alcatrao Porcionado,Ingrediente,Base,UN,Camara Fria,50,500,0.0,FOR-001,Ativo,Porcao individual
+ING-004,Arroz com Brocolis,Arroz com Brocolis Porcionado,Ingrediente,Base,UN,Camara Fria,50,500,0.0,FOR-001,Ativo,Porcao individual
+ING-005,Feijoada,Feijoada Porcionada,Ingrediente,Proteina,UN,Camara Fria,50,500,0.0,FOR-001,Ativo,Porcao individual
+ING-006,Estrogonofe de Frango,Estrogonofe de Frango Porcionado,Ingrediente,Proteina,UN,Camara Fria,50,500,0.0,FOR-001,Ativo,Porcao individual
+ING-007,Frango a Parmegiana,Frango a Parmegiana Porcionado,Ingrediente,Proteina,UN,Camara Fria,50,500,0.0,FOR-001,Ativo,Porcao individual
+ING-008,Carne com Legumes,Carne com Legumes Porcionada,Ingrediente,Proteina,UN,Camara Fria,50,500,0.0,FOR-001,Ativo,Porcao individual
+ING-009,Frango com Quiabo,Frango com Quiabo Porcionado,Ingrediente,Proteina,UN,Camara Fria,50,500,0.0,FOR-001,Ativo,Porcao individual
+ING-010,Moqueca de Banana da Terra,Moqueca de Banana da Terra,Ingrediente,Proteina,UN,Camara Fria,50,500,0.0,FOR-001,Ativo,Porcao individual
+ING-011,Picadinho de Carne,Picadinho de Carne Porcionado,Ingrediente,Proteina,UN,Camara Fria,50,500,0.0,FOR-001,Ativo,Porcao individual
+ING-012,Costela Desfiada,Costela Desfiada Porcionada,Ingrediente,Proteina,UN,Camara Fria,50,500,0.0,FOR-001,Ativo,Porcao individual
+ING-013,Sassami,Sassami Porcionado,Ingrediente,Proteina,UN,Camara Fria,50,500,0.0,FOR-001,Ativo,Porcao individual
+ING-014,Estrogonofe Kids,Estrogonofe Kids Porcionado,Ingrediente,Proteina,UN,Camara Fria,50,500,0.0,FOR-001,Ativo,Porcao individual
+ING-015,Filezinho de Frango,Filezinho de Frango Porcionado,Ingrediente,Proteina,UN,Camara Fria,50,500,0.0,FOR-001,Ativo,Porcao individual
+ING-016,Galinhada com Pequi,Galinhada com Pequi Porcionada,Ingrediente,Proteina,UN,Camara Fria,50,500,0.0,FOR-001,Ativo,Porcao individual
+ING-017,Galinhada,Galinhada Porcionada,Ingrediente,Proteina,UN,Camara Fria,50,500,0.0,FOR-001,Ativo,Porcao individual
+ING-018,Baiao de Dois,Baiao de Dois Porcionado,Ingrediente,Proteina,UN,Camara Fria,50,500,0.0,FOR-001,Ativo,Porcao individual
+ING-019,Mexidinho Mineiro,Mexidinho Mineiro Porcionado,Ingrediente,Proteina,UN,Camara Fria,50,500,0.0,FOR-001,Ativo,Porcao individual
+ING-020,Estrogonofe de Carne,Estrogonofe de Carne Porcionado,Ingrediente,Proteina,UN,Camara Fria,50,500,0.0,FOR-001,Ativo,Porcao individual
+ING-021,Caldo de Frango com Milho,Caldo de Frango com Milho Porcionado,Ingrediente,Proteina,UN,Camara Fria,50,500,0.0,FOR-001,Ativo,Porcao individual
+ING-022,Caldo de Carne com Mandioca,Caldo de Carne com Mandioca Porcionado,Ingrediente,Proteina,UN,Camara Fria,50,500,0.0,FOR-001,Ativo,Porcao individual
+ING-023,Molho Pomodoro,Molho Pomodoro Porcionado,Ingrediente,Acompanhamento,UN,Camara Fria,50,500,0.0,FOR-001,Ativo,Porcao individual
+ING-024,Feijao Carioca,Feijao Carioca Porcionado,Ingrediente,Acompanhamento,UN,Camara Fria,50,500,0.0,FOR-001,Ativo,Porcao individual
+ING-025,Angu,Angu Porcionado,Ingrediente,Acompanhamento,UN,Camara Fria,50,500,0.0,FOR-001,Ativo,Porcao individual
+ING-026,Pure de Mandioca,Pure de Mandioca Porcionado,Ingrediente,Acompanhamento,UN,Camara Fria,50,500,0.0,FOR-001,Ativo,Porcao individual
+ING-027,Pure de Batata,Pure de Batata Porcionado,Ingrediente,Acompanhamento,UN,Camara Fria,50,500,0.0,FOR-001,Ativo,Porcao individual
+ING-028,Espaguete,Espaguete Porcionado,Ingrediente,Massa,UN,Camara Fria,50,500,0.0,FOR-001,Ativo,Porcao individual
+ING-029,Molho Bolonhesa,Molho Bolonhesa Porcionado,Ingrediente,Molho,UN,Camara Fria,50,500,0.0,FOR-001,Ativo,Porcao individual
+ING-030,Molho Caponata,Molho Caponata Porcionado,Ingrediente,Molho,UN,Camara Fria,50,500,0.0,FOR-001,Ativo,Porcao individual
+PAN-001,BANANA CARAMELIZADA,BANANA CARAMELIZADA,Refeicao,Acompanhamento,UN,Estoque Seco,20,500,6.45,FOR-004,Ativo,SKU: 95
+PAN-002,BROWNIES,BROWNIES,Refeicao,Sobremesa,UN,Estoque Seco,20,500,6.5,FOR-004,Ativo,SKU: 7846
+PAN-003,CALDO DE CARNE COM MANDIOCA,CALDO DE CARNE COM MANDIOCA,Refeicao,Sopa/Caldo,UN,Camara Fria,20,500,13.5,FOR-004,Ativo,SKU: 13
+PAN-004,CALDO DE FRANGO COM MILHO,CALDO DE FRANGO COM MILHO,Refeicao,Sopa/Caldo,UN,Camara Fria,20,500,10.0,FOR-004,Ativo,SKU: 3679
+PAN-005,FAROFA DE BACON,FAROFA DE BACON,Refeicao,Acompanhamento,UN,Estoque Seco,20,500,28.9,FOR-004,Ativo,SKU: 27
+PAN-006,FAROFA DE CEBOLA,FAROFA DE CEBOLA,Refeicao,Acompanhamento,UN,Estoque Seco,20,500,17.5,FOR-004,Ativo,SKU: 54
+PAN-007,FRANGO DA SALADA,FRANGO DA SALADA,Refeicao,Proteina,UN,Camara Fria,20,500,7.9,FOR-004,Ativo,SKU: 33
+PAN-009,HAMBURGUER ARTESANAL,HAMBURGUER ARTESANAL,Refeicao,Prato Principal,UN,Camara Fria,20,500,14.9,FOR-004,Ativo,SKU: 6087
+PAN-010,KIT BAIAO,KIT BAIAO,Refeicao,Prato Principal,UN,Camara Fria,20,500,14.9,FOR-004,Ativo,SKU: 6
+PAN-011,KIT COSTELA GOURMET,KIT COSTELA GOURMET,Refeicao,Prato Principal,UN,Camara Fria,20,500,18.9,FOR-004,Ativo,SKU: 64
+PAN-012,ESPAGUETE COM POMODORO E ALMONDEGAS - KIDS,ESPAGUETE COM POMODORO E ALMONDEGAS - KIDS,Refeicao,Prato Principal,UN,Camara Fria,20,500,15.9,FOR-004,Ativo,SKU: 209
+PAN-013,KIT ESPAGUETE COM MOLHO BOLONHESA,KIT ESPAGUETE COM MOLHO BOLONHESA,Refeicao,Prato Principal,UN,Camara Fria,20,500,15.5,FOR-004,Ativo,SKU: 0164
+PAN-014,KIT ESPAGUETE COM MOLHO CAPONATA DE BERINJELA,KIT ESPAGUETE COM MOLHO CAPONATA DE BERINJELA,Refeicao,Prato Principal,UN,Camara Fria,20,500,11.9,FOR-004,Ativo,SKU: 0984
+PAN-015,KIT ESTROGONOFE DE CARNE,KIT ESTROGONOFE DE CARNE,Refeicao,Prato Principal,UN,Camara Fria,20,500,19.9,FOR-004,Ativo,SKU: 22
+PAN-016,KIT ESTROGONOFE DE FRANGO 220g - KIDS,KIT ESTROGONOFE DE FRANGO 220g - KIDS,Refeicao,Prato Principal,UN,Camara Fria,20,500,9.5,FOR-004,Ativo,SKU: 8975
+PAN-017,KIT ESTROGONOFE DE FRANGO,KIT ESTROGONOFE DE FRANGO,Refeicao,Prato Principal,UN,Camara Fria,20,500,12.5,FOR-004,Ativo,SKU: 23
+PAN-018,KIT FEIJOADA,KIT FEIJOADA,Refeicao,Prato Principal,UN,Camara Fria,20,500,12.9,FOR-004,Ativo,SKU: 30
+PAN-019,KIT FRANGO COM QUIABO,KIT FRANGO COM QUIABO,Refeicao,Prato Principal,UN,Camara Fria,20,500,14.9,FOR-004,Ativo,SKU: 199
+PAN-020,KIT FRANGO A PARMEGIANA,KIT FRANGO A PARMEGIANA,Refeicao,Prato Principal,UN,Camara Fria,20,500,13.9,FOR-004,Ativo,SKU: 67
+PAN-021,"FILE DE FRANGO, ARROZ COM BROCOLIS E LEGUMES","FILE DE FRANGO, ARROZ COM BROCOLIS E LEGUMES",Refeicao,Prato Principal,UN,Camara Fria,20,500,17.5,FOR-004,Ativo,SKU: 3258
+PAN-022,"FILE DE FRANGO, ARROZ COM BROCOLIS E PURE","FILE DE FRANGO, ARROZ COM BROCOLIS E PURE",Refeicao,Prato Principal,UN,Camara Fria,20,500,17.5,FOR-004,Ativo,SKU: 205
+PAN-023,"FILE DE FRANGO 100g, ARROZ BRANCO 150g E PURE","FILE DE FRANGO 100g, ARROZ BRANCO 150g E PURE",Refeicao,Prato Principal,UN,Camara Fria,20,500,17.5,FOR-004,Ativo,SKU: 8798
+PAN-024,FILEZINHO DE FRANGO COM ARROZ E PURE 260g - KIDS,FILEZINHO DE FRANGO COM ARROZ E PURE 260g - KIDS,Refeicao,Prato Principal,UN,Camara Fria,20,500,11.9,FOR-004,Ativo,SKU: 208
+PAN-025,KIT GALINHADA COM PEQUI,KIT GALINHADA COM PEQUI,Refeicao,Prato Principal,UN,Camara Fria,20,500,17.9,FOR-004,Ativo,SKU: 34
+PAN-026,KIT GALINHADA,KIT GALINHADA,Refeicao,Prato Principal,UN,Camara Fria,20,500,14.9,FOR-004,Ativo,SKU: 107
+PAN-027,KIT MEXIDINHO MINEIRO,KIT MEXIDINHO MINEIRO,Refeicao,Prato Principal,UN,Camara Fria,20,500,14.5,FOR-004,Ativo,SKU: 192
+PAN-028,KIT MOQUECA DE BANANA DA TERRA,KIT MOQUECA DE BANANA DA TERRA,Refeicao,Prato Principal,UN,Camara Fria,20,500,12.3,FOR-004,Ativo,SKU: 96
+PAN-029,KIT PICADINHO DE CARNE,KIT PICADINHO DE CARNE,Refeicao,Prato Principal,UN,Camara Fria,20,500,19.9,FOR-004,Ativo,SKU: 42
+PAN-030,KIT TEM DE TUDO,KIT TEM DE TUDO,Refeicao,Prato Principal,UN,Camara Fria,20,500,12.9,FOR-004,Ativo,SKU: 47
+PAN-031,KIT CARNE MOIDA COM LEGUMES,KIT CARNE MOIDA COM LEGUMES,Refeicao,Prato Principal,UN,Camara Fria,20,500,12.9,FOR-004,Ativo,SKU: 2597
+PAN-033,MOLHO BARBECUE DEFUMADO,MOLHO BARBECUE DEFUMADO,Refeicao,Molho,UN,Estoque Seco,20,500,49.5,FOR-004,Ativo,SKU: 56
+PAN-034,MOLHO CAESAR,MOLHO CAESAR,Refeicao,Molho,UN,Estoque Seco,20,500,23.9,FOR-004,Ativo,SKU: 2179
+PAN-035,SASSAMI PURE E LEGUMES,SASSAMI PURE E LEGUMES,Refeicao,Prato Principal,UN,Camara Fria,20,500,17.5,FOR-004,Ativo,SKU: 206
+EMB-002,Tampa adicionais Logo,Tampa adicionais Logo,Embalagem,Embalagem,UN,Estoque Seco,0,100,0.0,FOR-001,Ativo,
+EMB-003,Copos descartáveis,Copos descartáveis,Embalagem,Embalagem,PCT,Estoque Seco,0,100,0.0,FOR-001,Ativo,
+OPR-002,Detergente,Detergente,Operacional,Operacional,UN,Estoque Seco,0,100,0.0,FOR-001,Ativo,
+OPR-003,Água sanitária,Água sanitária,Operacional,Operacional,UN,Estoque Seco,0,100,0.0,FOR-001,Ativo,
+OPR-004,Álcool,Álcool,Operacional,Operacional,UN,Estoque Seco,0,100,0.0,FOR-001,Ativo,
+OPR-005,Esponja,Esponja,Operacional,Operacional,UN,Estoque Seco,0,100,0.0,FOR-001,Ativo,
+EMB-004,Copo adicional 100ml,Copo adicional 100ml,Embalagem,Embalagem,UN,Estoque Seco,0,100,0.0,FOR-001,Ativo,
+EMB-005,Copo 300ml,Copo 300ml,Embalagem,Embalagem,PCT,Estoque Seco,0,100,0.0,FOR-001,Ativo,
+EMB-006,Copo adicional com Logo,Copo adicional com Logo,Embalagem,Embalagem,PCT,Estoque Seco,0,100,0.0,FOR-001,Ativo,
+EMB-007,Embalagem plástico,Embalagem plástico,Embalagem,Embalagem,UN,Estoque Seco,0,100,0.0,FOR-001,Ativo,
+EMB-008,Copo isopor sorvete,Copo isopor sorvete,Embalagem,Embalagem,UN,Estoque Seco,0,100,0.0,FOR-001,Ativo,
+EMB-009,Tampa 300ml,Tampa 300ml,Embalagem,Embalagem,PCT,Estoque Seco,0,100,0.0,FOR-001,Ativo,
+ING-031,Goiabada,Goiabada,Ingrediente,Ingrediente,UN,Estoque Seco,0,100,0.0,FOR-001,Ativo,
+ING-032,Doce de leite,Doce de leite,Ingrediente,Ingrediente,UN,Estoque Seco,0,100,0.0,FOR-001,Ativo,
+ING-033,Torrada,Torrada,Ingrediente,Ingrediente,KG,Estoque Seco,0,100,0.0,FOR-001,Ativo,
+ING-034,Batata palha,Batata palha,Ingrediente,Ingrediente,UN,Estoque Seco,0,100,0.0,FOR-001,Ativo,
+ING-035,Molho maionese grill 1kg,Molho maionese grill 1kg,Ingrediente,Ingrediente,UN,Estoque Seco,0,100,0.0,FOR-001,Ativo,
+ING-036,Molho parmesão 1kg,Molho parmesão 1kg,Ingrediente,Ingrediente,UN,Estoque Seco,0,100,0.0,FOR-001,Ativo,
+ING-037,Molho mostarda e mel 2kg,Molho mostarda e mel 2kg,Ingrediente,Ingrediente,UN,Estoque Seco,0,100,0.0,FOR-001,Ativo,
+OPR-006,Touca branca,Touca branca,Operacional,Operacional,UN,Estoque Seco,0,100,0.0,FOR-001,Ativo,
+OPR-007,Luvas descartáveis,Luvas descartáveis,Operacional,Operacional,UN,Estoque Seco,0,100,0.0,FOR-001,Ativo,
+EMB-010,Saco de talher,Saco de talher,Embalagem,Embalagem,UN,Estoque Seco,0,100,0.0,FOR-001,Ativo,
+EMB-011,Saco guardanapos,Saco guardanapos,Embalagem,Embalagem,UN,Estoque Seco,0,100,0.0,FOR-001,Ativo,
+OPR-008,Talher descartável,Talher descartável,Operacional,Operacional,UN,Estoque Seco,0,100,0.0,FOR-001,Ativo,
+ING-038,Maionese sachê,Maionese sachê,Ingrediente,Ingrediente,UN,Estoque Seco,0,100,0.0,FOR-001,Ativo,
+ING-039,Ketchup sachê,Ketchup sachê,Ingrediente,Ingrediente,UN,Estoque Seco,0,100,0.0,FOR-001,Ativo,
+ING-040,Sal sachê,Sal sachê,Ingrediente,Ingrediente,UN,Estoque Seco,0,100,0.0,FOR-001,Ativo,
+OPR-009,Bobina impressora,Bobina impressora,Operacional,Operacional,UN,Estoque Seco,0,100,0.0,FOR-001,Ativo,
+ING-041,Açúcar sachê,Açúcar sachê,Ingrediente,Ingrediente,UN,Estoque Seco,0,100,0.0,FOR-001,Ativo,
+OPR-010,Bobina Cielo,Bobina Cielo,Operacional,Operacional,UN,Estoque Seco,0,100,0.0,FOR-001,Ativo,
+OPR-011,Colher descartável,Colher descartável,Operacional,Operacional,UN,Estoque Seco,0,100,0.0,FOR-001,Ativo,
+EMB-012,Saco iFood,Saco iFood,Embalagem,Embalagem,UN,Estoque Seco,0,100,0.0,FOR-001,Ativo,
+EMB-013,Canudo,Canudo,Embalagem,Embalagem,PCT,Estoque Seco,0,100,0.0,FOR-001,Ativo,
+ING-042,Pimenta sachê,Pimenta sachê,Ingrediente,Ingrediente,UN,Estoque Seco,0,100,0.0,FOR-001,Ativo,
+EMB-014,Embalagem com logo,Embalagem com logo,Embalagem,Embalagem,UN,Estoque Seco,0,100,0.0,FOR-001,Ativo,
+ING-043,Cápsula café,Cápsula café,Ingrediente,Ingrediente,UN,Estoque Seco,0,100,0.0,FOR-001,Ativo,
+BEB-001,Coca normal,Coca normal,Bebida,Bebida,UN,Estoque Seco,0,100,0.0,FOR-001,Ativo,
+BEB-002,Fanta guaraná zero,Fanta guaraná zero,Bebida,Bebida,UN,Estoque Seco,0,100,0.0,FOR-001,Ativo,
+BEB-003,Sprite normal,Sprite normal,Bebida,Bebida,UN,Estoque Seco,0,100,0.0,FOR-001,Ativo,
+BEB-004,Fanta uva,Fanta uva,Bebida,Bebida,UN,Estoque Seco,0,100,0.0,FOR-001,Ativo,
+BEB-005,Fanta laranja,Fanta laranja,Bebida,Bebida,UN,Estoque Seco,0,100,0.0,FOR-001,Ativo,
+BEB-006,Guaraná Antártica,Guaraná Antártica,Bebida,Bebida,UN,Estoque Seco,0,100,0.0,FOR-001,Ativo,
+BEB-007,Água com gás,Água com gás,Bebida,Bebida,UN,Estoque Seco,0,100,0.0,FOR-001,Ativo,
+BEB-008,Água sem gás,Água sem gás,Bebida,Bebida,UN,Estoque Seco,0,100,0.0,FOR-001,Ativo,
+BEB-009,Fanta guaraná normal,Fanta guaraná normal,Bebida,Bebida,UN,Estoque Seco,0,100,0.0,FOR-001,Ativo,
+BEB-010,Coca zero,Coca zero,Bebida,Bebida,UN,Estoque Seco,0,100,0.0,FOR-001,Ativo,
+BEB-011,Ice tea pêssego,Ice tea pêssego,Bebida,Bebida,UN,Estoque Seco,0,100,0.0,FOR-001,Ativo,
+BEB-012,Ice tea limão,Ice tea limão,Bebida,Bebida,UN,Estoque Seco,0,100,0.0,FOR-001,Ativo,
+BEB-013,Suco uva,Suco uva,Bebida,Bebida,UN,Estoque Seco,0,100,0.0,FOR-001,Ativo,
+BEB-014,Suco de pêssego,Suco de pêssego,Bebida,Bebida,UN,Estoque Seco,0,100,0.0,FOR-001,Ativo,
+BEB-015,Suco de maracujá,Suco de maracujá,Bebida,Bebida,UN,Estoque Seco,0,100,0.0,FOR-001,Ativo,
+ING-044,Carne Hamburguer,Carne Hamburguer,Ingrediente,Proteina,UN,Camara Fria,50,500,0.0,FOR-001,Ativo,
+ING-045,Pão de Hamburguer,Pão de Hamburguer,Ingrediente,Base,UN,Estoque Seco,50,500,0.0,FOR-001,Ativo,
+PAN-036,HAMBURGUER TOP SIMPLES,HAMBURGUER TOP SIMPLES,Refeicao,Prato Principal,UN,Camara Fria,20,500,0.0,FOR-004,Ativo,
+PAN-037,BLEND ESPECIAL DUPLO,BLEND ESPECIAL DUPLO,Refeicao,Prato Principal,UN,Camara Fria,20,500,0.0,FOR-004,Ativo,
+PAN-038,BLEND SIMPLES,BLEND SIMPLES,Refeicao,Prato Principal,UN,Camara Fria,20,500,0.0,FOR-004,Ativo,
+PAN-039,SALADA CAESAR,SALADA CAESAR,Refeicao,Prato Principal,UN,Camara Fria,20,500,0.0,FOR-004,Ativo,
+PAN-040,SALADA DE FRANGO COM MOLHO PARMESAO,SALADA DE FRANGO COM MOLHO PARMESAO,Refeicao,Prato Principal,UN,Camara Fria,20,500,0.0,FOR-004,Ativo,

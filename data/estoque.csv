@@ -1,0 +1,125 @@
+id_item,nome,categoria,local,unidade,saldo_atual,ultima_atualizacao
+HRT-001,Couve Higienizada,Hortifruti,Geladeira,KG,40.0,2026-05-27 10:56:23
+EMB-001,Embalagem Seladora 20x30,Embalagem,Estoque Seco,UN,2300.0,2026-05-27 09:27:26
+OPR-001,Luva Descartavel M,Operacional,Estoque Seco,UN,400.0,2026-05-27 10:56:49
+ING-001,Arroz Branco,Ingrediente,Camara Fria,UN,419.0,2026-05-28 12:19:41
+ING-002,Arroz com Caldo de Carne,Ingrediente,Camara Fria,UN,286.0,2026-05-28 12:07:29
+ING-003,Arroz com Alcatrao,Ingrediente,Camara Fria,UN,78.0,2026-05-28 12:07:16
+ING-004,Arroz com Brocolis,Ingrediente,Camara Fria,UN,36.0,2026-05-28 12:06:47
+ING-005,Feijoada,Ingrediente,Camara Fria,UN,30.0,2026-05-28 12:06:23
+ING-006,Estrogonofe de Frango,Ingrediente,Camara Fria,UN,80.0,2026-05-28 12:06:18
+ING-007,Frango a Parmegiana,Ingrediente,Camara Fria,UN,38.0,2026-05-28 12:06:34
+ING-008,Carne com Legumes,Ingrediente,Camara Fria,UN,131.0,2026-05-28 12:07:44
+ING-009,Frango com Quiabo,Ingrediente,Camara Fria,UN,14.0,2026-05-28 12:06:31
+ING-010,Moqueca de Banana da Terra,Ingrediente,Camara Fria,UN,50.0,2026-05-26 15:20:30
+ING-011,Picadinho de Carne,Ingrediente,Camara Fria,UN,6.0,2026-05-28 12:07:28
+ING-012,Costela Desfiada,Ingrediente,Camara Fria,UN,53.0,2026-05-28 12:05:45
+ING-013,Sassami,Ingrediente,Camara Fria,UN,57.0,2026-05-28 12:07:38
+ING-014,Estrogonofe Kids,Ingrediente,Camara Fria,UN,15.0,2026-05-28 12:06:13
+ING-015,Filezinho de Frango,Ingrediente,Camara Fria,UN,101.0,2026-05-28 12:07:05
+ING-016,Galinhada com Pequi,Ingrediente,Camara Fria,UN,36.0,2026-05-28 12:07:13
+ING-017,Galinhada,Ingrediente,Camara Fria,UN,2.0,2026-05-28 12:07:18
+ING-018,Baiao de Dois,Ingrediente,Camara Fria,UN,85.0,2026-05-28 12:05:36
+ING-019,Mexidinho Mineiro,Ingrediente,Camara Fria,UN,51.0,2026-05-28 12:07:23
+ING-020,Estrogonofe de Carne,Ingrediente,Camara Fria,UN,54.0,2026-05-28 12:06:07
+ING-021,Caldo de Frango com Milho,Ingrediente,Camara Fria,UN,0.0,2026-05-22 14:44:00
+ING-022,Caldo de Carne com Mandioca,Ingrediente,Camara Fria,UN,0.0,2026-05-22 14:44:00
+ING-023,Molho Pomodoro,Ingrediente,Camara Fria,UN,46.0,2026-05-28 12:06:36
+ING-024,Feijao Carioca,Ingrediente,Camara Fria,UN,37.0,2026-05-28 12:07:36
+ING-025,Angu,Ingrediente,Camara Fria,UN,14.0,2026-05-28 12:06:29
+ING-026,Pure de Mandioca,Ingrediente,Camara Fria,UN,53.0,2026-05-28 12:05:42
+ING-027,Pure de Batata,Ingrediente,Camara Fria,UN,90.0,2026-05-28 12:07:41
+ING-028,Espaguete,Ingrediente,Camara Fria,UN,89.0,2026-05-28 12:05:58
+ING-029,Molho Bolonhesa,Ingrediente,Camara Fria,UN,73.0,2026-05-28 12:05:56
+ING-030,Molho Caponata,Ingrediente,Camara Fria,UN,8.0,2026-05-28 12:06:01
+PAN-001,BANANA CARAMELIZADA 200g,Refeicao,Estoque Seco,UN,10.0,2026-05-28 12:23:36
+PAN-002,BROWNIES 110g,Refeicao,Estoque Seco,UN,3.0,2026-05-27 11:10:22
+PAN-003,CALDO DE CARNE COM MANDIOCA 400g,Refeicao,Camara Fria,UN,2.0,2026-05-27 11:10:22
+PAN-004,CALDO DE FRANGO COM MILHO 400g,Refeicao,Camara Fria,UN,0.0,2026-05-27 11:10:22
+PAN-005,FAROFA DE BACON 500g,Refeicao,Estoque Seco,UN,7.0,2026-05-27 11:10:22
+PAN-006,FAROFA DE CEBOLA 500g,Refeicao,Estoque Seco,UN,14.0,2026-05-27 11:10:22
+PAN-007,FRANGO DA SALADA 100g,Refeicao,Camara Fria,UN,5.0,2026-05-27 11:10:22
+PAN-009,HAMBURGUER ARTESANAL 120g,Refeicao,Camara Fria,UN,20.0,2026-05-27 11:10:22
+PAN-010,KIT BAIAO 350g,Refeicao,Camara Fria,UN,85.0,2026-05-27 11:10:22
+PAN-011,KIT COSTELA GOURMET 410g,Refeicao,Camara Fria,UN,53.0,2026-05-27 11:10:22
+PAN-012,ESPAGUETE COM POMODORO E ALMONDEGAS - KIDS 300g,Refeicao,Camara Fria,UN,8.0,2026-05-27 11:10:22
+PAN-013,KIT ESPAGUETE COM MOLHO BOLONHESA 360g,Refeicao,Camara Fria,UN,73.0,2026-05-27 11:10:22
+PAN-014,KIT ESPAGUETE COM MOLHO CAPONATA DE BERINJELA 320g,Refeicao,Camara Fria,UN,8.0,2026-05-27 11:10:22
+PAN-015,KIT ESTROGONOFE DE CARNE 330g,Refeicao,Camara Fria,UN,54.0,2026-05-27 11:10:22
+PAN-016,KIT ESTROGONOFE DE FRANGO 220g - KIDS,Refeicao,Camara Fria,UN,15.0,2026-05-27 11:10:22
+PAN-017,KIT ESTROGONOFE DE FRANGO 330g,Refeicao,Camara Fria,UN,80.0,2026-05-27 11:10:22
+PAN-018,KIT FEIJOADA 350g,Refeicao,Camara Fria,UN,30.0,2026-05-27 11:10:22
+PAN-019,KIT FRANGO COM QUIABO 410g,Refeicao,Camara Fria,UN,14.0,2026-05-27 11:10:22
+PAN-020,KIT FRANGO A PARMEGIANA 330g,Refeicao,Camara Fria,UN,38.0,2026-05-27 11:10:22
+PAN-021,"FILE DE FRANGO, ARROZ COM BROCOLIS E LEGUMES 360g",Refeicao,Camara Fria,UN,23.0,2026-05-27 11:10:22
+PAN-022,"FILE DE FRANGO, ARROZ COM BROCOLIS E PURE 340g",Refeicao,Camara Fria,UN,13.0,2026-05-27 11:10:22
+PAN-023,"FILE DE FRANGO 100g, ARROZ BRANCO 150g E PURE 100g",Refeicao,Camara Fria,UN,49.0,2026-05-27 11:10:22
+PAN-024,FILEZINHO DE FRANGO COM ARROZ E PURE 260g - KIDS,Refeicao,Camara Fria,UN,7.0,2026-05-27 11:10:22
+PAN-025,KIT GALINHADA COM PEQUI 380g,Refeicao,Camara Fria,UN,36.0,2026-05-27 11:10:22
+PAN-026,KIT GALINHADA 380g,Refeicao,Camara Fria,UN,2.0,2026-05-27 11:10:22
+PAN-027,KIT MEXIDINHO MINEIRO 310g,Refeicao,Camara Fria,UN,51.0,2026-05-27 11:10:22
+PAN-028,KIT MOQUECA DE BANANA DA TERRA 320g,Refeicao,Camara Fria,UN,0.0,2026-05-27 11:10:22
+PAN-029,KIT PICADINHO DE CARNE 330g,Refeicao,Camara Fria,UN,6.0,2026-05-27 11:10:22
+PAN-030,KIT TEM DE TUDO 330g,Refeicao,Camara Fria,UN,50.0,2026-05-27 11:10:22
+PAN-031,KIT CARNE MOIDA COM LEGUMES 350g,Refeicao,Camara Fria,UN,37.0,2026-05-27 11:10:22
+PAN-033,MOLHO BARBECUE DEFUMADO,Refeicao,Estoque Seco,UN,5.0,2026-05-27 11:10:22
+PAN-034,MOLHO CAESAR 350g,Refeicao,Estoque Seco,UN,0.0,2026-05-22 17:17:53
+PAN-035,SASSAMI PURE E LEGUMES,Refeicao,Camara Fria,UN,21.0,2026-05-27 11:13:08
+EMB-002,Tampa adicionais Logo,Embalagem,Estoque Seco,UN,678.0,2026-05-27 15:22:20
+EMB-003,Copos descartáveis,Embalagem,Estoque Seco,PCT,21.0,2026-05-27 15:22:20
+OPR-002,Detergente,Operacional,Estoque Seco,UN,21.0,2026-05-27 15:22:20
+OPR-003,Água sanitária,Operacional,Estoque Seco,UN,8.0,2026-05-27 15:22:20
+OPR-004,Álcool,Operacional,Estoque Seco,UN,9.0,2026-05-27 15:22:20
+OPR-005,Esponja,Operacional,Estoque Seco,UN,11.0,2026-05-27 15:22:20
+EMB-004,Copo adicional 100ml,Embalagem,Estoque Seco,UN,4.0,2026-05-27 15:22:20
+EMB-005,Copo 300ml,Embalagem,Estoque Seco,PCT,8.0,2026-05-27 15:22:20
+EMB-006,Copo adicional com Logo,Embalagem,Estoque Seco,PCT,4.0,2026-05-27 15:22:20
+EMB-007,Embalagem plástico,Embalagem,Estoque Seco,UN,219.0,2026-05-27 15:22:20
+EMB-008,Copo isopor sorvete,Embalagem,Estoque Seco,UN,14.0,2026-05-27 15:22:20
+EMB-009,Tampa 300ml,Embalagem,Estoque Seco,PCT,11.0,2026-05-27 15:22:20
+ING-031,Goiabada 400g,Ingrediente,Estoque Seco,UN,3.0,2026-05-27 15:22:20
+ING-032,Doce de leite 400g,Ingrediente,Estoque Seco,UN,6.0,2026-05-27 15:22:20
+ING-033,Torrada,Ingrediente,Estoque Seco,KG,1.5,2026-05-27 15:22:20
+ING-034,Batata palha 800g,Ingrediente,Estoque Seco,UN,5.0,2026-05-27 15:22:20
+ING-035,Molho maionese grill 1kg,Ingrediente,Estoque Seco,UN,1.0,2026-05-27 15:22:20
+ING-036,Molho parmesão 1kg,Ingrediente,Estoque Seco,UN,1.0,2026-05-27 15:22:20
+ING-037,Molho mostarda e mel 2kg,Ingrediente,Estoque Seco,UN,1.0,2026-05-27 15:22:20
+OPR-006,Touca branca,Operacional,Estoque Seco,UN,135.0,2026-05-27 15:22:20
+OPR-007,Luvas descartáveis,Operacional,Estoque Seco,UN,611.0,2026-05-27 15:22:20
+EMB-010,Saco de talher,Embalagem,Estoque Seco,UN,2000.0,2026-05-27 15:22:20
+EMB-011,Saco guardanapos,Embalagem,Estoque Seco,UN,1200.0,2026-05-27 15:22:20
+OPR-008,Talher descartável,Operacional,Estoque Seco,UN,658.0,2026-05-27 15:22:20
+ING-038,Maionese sachê,Ingrediente,Estoque Seco,UN,110.0,2026-05-27 15:22:20
+ING-039,Ketchup sachê,Ingrediente,Estoque Seco,UN,108.0,2026-05-27 15:22:20
+ING-040,Sal sachê,Ingrediente,Estoque Seco,UN,1600.0,2026-05-27 15:22:20
+OPR-009,Bobina impressora,Operacional,Estoque Seco,UN,68.0,2026-05-27 15:22:20
+ING-041,Açúcar sachê,Ingrediente,Estoque Seco,UN,1000.0,2026-05-27 15:22:20
+OPR-010,Bobina Cielo,Operacional,Estoque Seco,UN,145.0,2026-05-27 15:22:20
+OPR-011,Colher descartável,Operacional,Estoque Seco,UN,265.0,2026-05-27 15:22:20
+EMB-012,Saco iFood,Embalagem,Estoque Seco,UN,72.0,2026-05-27 15:22:20
+EMB-013,Canudo,Embalagem,Estoque Seco,PCT,9.0,2026-05-27 15:22:20
+ING-042,Pimenta sachê,Ingrediente,Estoque Seco,UN,38.0,2026-05-27 15:22:20
+EMB-014,Embalagem com logo,Embalagem,Estoque Seco,UN,0.0,2026-05-27 15:22:20
+ING-043,Cápsula café,Ingrediente,Estoque Seco,UN,29.0,2026-05-27 15:22:20
+BEB-001,Coca normal,Bebida,Estoque Seco,UN,70.0,2026-05-27 15:22:20
+BEB-002,Fanta guaraná zero,Bebida,Estoque Seco,UN,5.0,2026-05-27 15:22:20
+BEB-003,Sprite normal,Bebida,Estoque Seco,UN,4.0,2026-05-27 15:22:20
+BEB-004,Fanta uva,Bebida,Estoque Seco,UN,1.0,2026-05-27 15:22:20
+BEB-005,Fanta laranja,Bebida,Estoque Seco,UN,3.0,2026-05-27 15:22:20
+BEB-006,Guaraná Antártica,Bebida,Estoque Seco,UN,8.0,2026-05-27 15:22:20
+BEB-007,Água com gás,Bebida,Estoque Seco,UN,5.0,2026-05-27 15:22:20
+BEB-008,Água sem gás,Bebida,Estoque Seco,UN,16.0,2026-05-27 15:22:20
+BEB-009,Fanta guaraná normal,Bebida,Estoque Seco,UN,33.0,2026-05-27 15:22:20
+BEB-010,Coca zero,Bebida,Estoque Seco,UN,82.0,2026-05-27 15:22:20
+BEB-011,Ice tea pêssego,Bebida,Estoque Seco,UN,16.0,2026-05-27 15:22:20
+BEB-012,Ice tea limão,Bebida,Estoque Seco,UN,16.0,2026-05-27 15:22:20
+BEB-013,Suco uva,Bebida,Estoque Seco,UN,23.0,2026-05-27 15:22:20
+BEB-014,Suco de pêssego,Bebida,Estoque Seco,UN,4.0,2026-05-27 15:22:20
+BEB-015,Suco de maracujá,Bebida,Estoque Seco,UN,23.0,2026-05-27 15:22:20
+ING-044,Carne Hamburguer,Ingrediente,Camara Fria,UN,0.0,2026-05-27 17:42:26
+ING-045,Pão de Hamburguer,Ingrediente,Estoque Seco,UN,0.0,2026-05-27 17:42:26
+PAN-036,HAMBURGUER TOP SIMPLES,Refeicao,Camara Fria,UN,0.0,2026-05-27 17:42:26
+PAN-037,BLEND ESPECIAL DUPLO,Refeicao,Camara Fria,UN,0.0,2026-05-27 17:42:26
+PAN-038,BLEND SIMPLES,Refeicao,Camara Fria,UN,0.0,2026-05-27 17:42:26
+PAN-039,SALADA CAESAR,Refeicao,Camara Fria,UN,0.0,2026-05-27 17:42:26
+PAN-040,SALADA DE FRANGO COM MOLHO PARMESAO,Refeicao,Camara Fria,UN,0.0,2026-05-27 17:42:26

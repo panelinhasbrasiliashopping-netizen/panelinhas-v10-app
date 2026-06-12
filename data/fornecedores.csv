@@ -1,0 +1,5 @@
+﻿id_fornecedor,nome,nome_curto,cnpj,contato,telefone,email,prazo_dias,frequencia,status,obs
+FOR-001,Distribuidora Gelo Vivo Ltda,Gelo Vivo,12.345.678/0001-90,Carlos Mendes,(61) 99999-1111,carlos@gelovivo.com.br,2,Segunda e Quarta,Ativo,Congelados
+FOR-002,Hortifruti Cerrado,Cerrado Hort.,98.765.432/0001-11,Ana Souza,(61) 98888-2222,ana@hortifruticerrado.com.br,1,Diária,Ativo,Entrega diária exceto domingo
+FOR-003,Embalagens Total Pack,Total Pack,55.111.222/0001-33,Roberto Lima,(61) 97777-3333,roberto@totalpack.com.br,5,Sexta,Ativo,Embalagens seladora
+FOR-004,Naturall Foods,Naturall,12.345.678/0001-99,Comercial,(61) 99999-4444,comercial@naturallfoods.com.br,7,Semanal,Ativo,Refeicoes Naturall
