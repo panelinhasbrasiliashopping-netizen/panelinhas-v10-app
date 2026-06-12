@@ -8,7 +8,7 @@ sys.path.insert(0, str(Path(__file__).parent))
 from utils.data import (autenticar, listar_itens, listar_fornecedores,
                         listar_composicao, composicao_produto, is_composto,
                         registrar_saida_composta, registrar_movimento_batch,
-                        registrar_saida_em_lote,
+                        registrar_saida_em_lote, listar_mapeamentos,
                         listar_estoque, listar_movimentos, registrar_movimento,
                         saldo_item, status_item)
 from utils.logo import LOGO_B64
@@ -1517,7 +1517,6 @@ with col_conteudo:
             
             if arq_upload is not None:
                 from utils.swfast_parser import parse_swfast_file
-                from utils.data import listar_mapeamentos, saldo_item, registrar_saida_em_lote
                 
                 try:
                     arq_upload.seek(0)
