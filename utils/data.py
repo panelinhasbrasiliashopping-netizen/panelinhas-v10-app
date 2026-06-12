@@ -76,6 +76,11 @@ def _invalidar(nome):
         _cache_rapido.clear()
 
 
+def limpar_cache():
+    _cache_lento.clear()
+    _cache_rapido.clear()
+
+
 def _salvar(nome, df):
     if df.empty:
         return

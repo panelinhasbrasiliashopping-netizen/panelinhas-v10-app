@@ -10,7 +10,7 @@ from utils.data import (autenticar, listar_itens, listar_fornecedores,
                         registrar_saida_composta, registrar_movimento_batch,
                         registrar_saida_em_lote, listar_mapeamentos,
                         listar_estoque, listar_movimentos, registrar_movimento,
-                        saldo_item, status_item)
+                        saldo_item, status_item, limpar_cache)
 from utils.logo import LOGO_B64
 
 st.set_page_config(page_title="Panelinhas do Brasil", page_icon="🍳", layout="wide")
@@ -2402,7 +2402,7 @@ with col_conteudo:
             st.markdown('<div style="height:20px;"></div>', unsafe_allow_html=True)
             st.markdown('<div class="btn-export">', unsafe_allow_html=True)
             if st.button("↻ Atualizar", use_container_width=True, key="dash_refresh"):
-                _ler_cached.clear()
+                limpar_cache()
                 st.rerun()
             st.markdown('</div>', unsafe_allow_html=True)
 
@@ -3211,7 +3211,7 @@ with col_conteudo:
             with cb3:
                 st.markdown('<div class="btn-plan">', unsafe_allow_html=True)
                 if st.button("↻ Atualizar", use_container_width=True, key="ref_plan"):
-                    _ler_cached.clear()
+                    limpar_cache()
                     st.rerun()
                 st.markdown('</div>', unsafe_allow_html=True)
 
@@ -3590,7 +3590,7 @@ with col_conteudo:
         header("🧩","Composição de Produtos","Defina quais ingredientes compõem cada Panelinha")
         import pandas as pd
         from pathlib import Path
-        from utils.data import listar_composicao, _salvar, _ler_cached
+        from utils.data import listar_composicao, _salvar, limpar_cache
 
         df_comp = listar_composicao()
         itens   = listar_itens()
@@ -3659,7 +3659,7 @@ with col_conteudo:
                 }])
                 df_novo = pd.concat([df_comp, nova], ignore_index=True)
                 _salvar("composicao", df_novo)
-                _ler_cached.clear()
+                limpar_cache()
                 st.session_state["msg_comp"] = f"✅ {nome_ing} adicionado à composição de {nome_pan}"
                 st.rerun()
 
@@ -3679,7 +3679,7 @@ with col_conteudo:
                 idx_rem = opcoes_rem[rem_sel]
                 df_comp = df_comp.drop(idx_rem).reset_index(drop=True)
                 _salvar("composicao", df_comp)
-                _ler_cached.clear()
+                limpar_cache()
                 st.success("✅ Removido!")
                 st.rerun()
 
